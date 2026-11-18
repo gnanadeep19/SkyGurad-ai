@@ -1,0 +1,88 @@
+{
+  "dataset": "chennai-ghcnh-january-2024.csv",
+  "sha256": "b06f4e60da9e9f5a4e11360eafb86d14e678e828b6c581671935472e5905204f",
+  "evaluated_at": "2026-11-12T19:39:42.938Z",
+  "rows": 248,
+  "unique_observations": 248,
+  "period": {
+    "start": "2024-01-01T00:00:00.000Z",
+    "end": "2024-01-31T21:00:00.000Z"
+  },
+  "historical_summary": {
+    "scored": 224,
+    "insufficient": 24,
+    "warning": 69,
+    "critical": 0,
+    "baseline_window": 96,
+    "refit_interval": 24,
+    "minimum_history": 24
+  },
+  "thresholds": {
+    "warning_score": 0.32,
+    "critical_score": 0.62,
+    "regional_fraction": 0.5
+  },
+  "flagged_fraction_of_scored": 0.308,
+  "utc_hour_breakdown": [
+    {
+      "hour_utc": 0,
+      "scored": 28,
+      "flagged": 2,
+      "flagged_fraction": 0.0714
+    },
+    {
+      "hour_utc": 3,
+      "scored": 28,
+      "flagged": 7,
+      "flagged_fraction": 0.25
+    },
+    {
+      "hour_utc": 6,
+      "scored": 28,
+      "flagged": 24,
+      "flagged_fraction": 0.8571
+    },
+    {
+      "hour_utc": 9,
+      "scored": 28,
+      "flagged": 23,
+      "flagged_fraction": 0.8214
+    },
+    {
+      "hour_utc": 12,
+      "scored": 28,
+      "flagged": 6,
+      "flagged_fraction": 0.2143
+    },
+    {
+      "hour_utc": 15,
+      "scored": 28,
+      "flagged": 7,
+      "flagged_fraction": 0.25
+    },
+    {
+      "hour_utc": 18,
+      "scored": 28,
+      "flagged": 0,
+      "flagged_fraction": 0
+    },
+    {
+      "hour_utc": 21,
+      "scored": 28,
+      "flagged": 0,
+      "flagged_fraction": 0
+    }
+  ],
+  "observation_spacing_hours": {
+    "pairs": 247,
+    "median": 3,
+    "maximum": 3
+  },
+  "labeled_evaluation": null,
+  "notes": [
+    "Rolling evaluation scores each observation using earlier observations only; it is not an independent deployment validation.",
+    "Flagged observations are not confirmed sensor faults.",
+    "Hourly groups use UTC; flag frequency and gaps do not establish a cause or a sensor fault.",
+    "No fault labels were supplied; false-positive rate, precision and recall cannot be determined."
+  ]
+}

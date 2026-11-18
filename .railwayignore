@@ -1,0 +1,11 @@
+.env*
+!.env.example
+.manus-logs/
+data/runtime/
+data/postgres-local/
+data/gateway-local/
+data/noaa/*.psv
+data/noaa/ghcnh-station-list.txt
+**/*.bak
+**/*.dump
+**/*.log

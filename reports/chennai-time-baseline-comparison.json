@@ -1,0 +1,211 @@
+{
+  "evaluated_at": "2026-11-13T05:02:48.524Z",
+  "candidate": {
+    "name": "Experimental same-UTC-hour robust baseline",
+    "parameters": {
+      "minimum_prior_days": 7,
+      "max_prior_days": 14,
+      "threshold_robust_deviations": 3.5,
+      "scale_floors": {
+        "temperature": 0.5,
+        "humidity": 3,
+        "pressure": 1
+      }
+    },
+    "classification": "A flag occurs when any measurement deviates by at least 3.5 robust scales from its prior same-hour baseline."
+  },
+  "datasets": [
+    {
+      "dataset": "chennai-ghcnh-january-2024.csv",
+      "sha256": "b06f4e60da9e9f5a4e11360eafb86d14e678e828b6c581671935472e5905204f",
+      "period": {
+        "start": "2024-01-01T00:00:00.000Z",
+        "end": "2024-01-31T21:00:00.000Z"
+      },
+      "current_thresholds": {
+        "warning_score": 0.32,
+        "critical_score": 0.62,
+        "regional_fraction": 0.5
+      },
+      "comparison": {
+        "total_observations": 248,
+        "candidate_eligible": 192,
+        "matched_observations": 192,
+        "current_flagged": 64,
+        "candidate_flagged": 19,
+        "both_flagged": 7,
+        "current_only": 57,
+        "candidate_only": 12,
+        "neither_flagged": 116,
+        "current_flag_fraction": 0.3333,
+        "candidate_flag_fraction": 0.099,
+        "utc_hour_breakdown": [
+          {
+            "hour_utc": 0,
+            "matched": 24,
+            "current_flagged": 2,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0.0833,
+            "candidate_flag_fraction": 0.1667
+          },
+          {
+            "hour_utc": 3,
+            "matched": 24,
+            "current_flagged": 7,
+            "candidate_flagged": 3,
+            "current_flag_fraction": 0.2917,
+            "candidate_flag_fraction": 0.125
+          },
+          {
+            "hour_utc": 6,
+            "matched": 24,
+            "current_flagged": 22,
+            "candidate_flagged": 1,
+            "current_flag_fraction": 0.9167,
+            "candidate_flag_fraction": 0.0417
+          },
+          {
+            "hour_utc": 9,
+            "matched": 24,
+            "current_flagged": 20,
+            "candidate_flagged": 1,
+            "current_flag_fraction": 0.8333,
+            "candidate_flag_fraction": 0.0417
+          },
+          {
+            "hour_utc": 12,
+            "matched": 24,
+            "current_flagged": 6,
+            "candidate_flagged": 1,
+            "current_flag_fraction": 0.25,
+            "candidate_flag_fraction": 0.0417
+          },
+          {
+            "hour_utc": 15,
+            "matched": 24,
+            "current_flagged": 7,
+            "candidate_flagged": 2,
+            "current_flag_fraction": 0.2917,
+            "candidate_flag_fraction": 0.0833
+          },
+          {
+            "hour_utc": 18,
+            "matched": 24,
+            "current_flagged": 0,
+            "candidate_flagged": 3,
+            "current_flag_fraction": 0,
+            "candidate_flag_fraction": 0.125
+          },
+          {
+            "hour_utc": 21,
+            "matched": 24,
+            "current_flagged": 0,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0,
+            "candidate_flag_fraction": 0.1667
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "chennai-ghcnh-2024-02.csv",
+      "sha256": "cc35b0c5dcb9e171f839e13aa7c3ac621d7653cfa24dc6fd43f2eac8c9f76209",
+      "period": {
+        "start": "2024-02-01T00:00:00.000Z",
+        "end": "2024-02-29T21:00:00.000Z"
+      },
+      "current_thresholds": {
+        "warning_score": 0.32,
+        "critical_score": 0.62,
+        "regional_fraction": 0.5
+      },
+      "comparison": {
+        "total_observations": 230,
+        "candidate_eligible": 174,
+        "matched_observations": 174,
+        "current_flagged": 56,
+        "candidate_flagged": 6,
+        "both_flagged": 3,
+        "current_only": 53,
+        "candidate_only": 3,
+        "neither_flagged": 115,
+        "current_flag_fraction": 0.3218,
+        "candidate_flag_fraction": 0.0345,
+        "utc_hour_breakdown": [
+          {
+            "hour_utc": 0,
+            "matched": 22,
+            "current_flagged": 2,
+            "candidate_flagged": 1,
+            "current_flag_fraction": 0.0909,
+            "candidate_flag_fraction": 0.0455
+          },
+          {
+            "hour_utc": 3,
+            "matched": 21,
+            "current_flagged": 2,
+            "candidate_flagged": 3,
+            "current_flag_fraction": 0.0952,
+            "candidate_flag_fraction": 0.1429
+          },
+          {
+            "hour_utc": 6,
+            "matched": 22,
+            "current_flagged": 15,
+            "candidate_flagged": 0,
+            "current_flag_fraction": 0.6818,
+            "candidate_flag_fraction": 0
+          },
+          {
+            "hour_utc": 9,
+            "matched": 22,
+            "current_flagged": 18,
+            "candidate_flagged": 1,
+            "current_flag_fraction": 0.8182,
+            "candidate_flag_fraction": 0.0455
+          },
+          {
+            "hour_utc": 12,
+            "matched": 22,
+            "current_flagged": 10,
+            "candidate_flagged": 0,
+            "current_flag_fraction": 0.4545,
+            "candidate_flag_fraction": 0
+          },
+          {
+            "hour_utc": 15,
+            "matched": 21,
+            "current_flagged": 4,
+            "candidate_flagged": 0,
+            "current_flag_fraction": 0.1905,
+            "candidate_flag_fraction": 0
+          },
+          {
+            "hour_utc": 18,
+            "matched": 22,
+            "current_flagged": 1,
+            "candidate_flagged": 0,
+            "current_flag_fraction": 0.0455,
+            "candidate_flag_fraction": 0
+          },
+          {
+            "hour_utc": 21,
+            "matched": 22,
+            "current_flagged": 4,
+            "candidate_flagged": 1,
+            "current_flag_fraction": 0.1818,
+            "candidate_flag_fraction": 0.0455
+          }
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "Both detectors are compared on exactly the observations for which both produced a score.",
+    "The candidate and current detector use different scores and thresholds; their flag rates are not directly calibrated to equal sensitivity.",
+    "Only earlier observations are used; each dataset is analyzed independently, including its warm-up period.",
+    "These data have no verified sensor-fault labels; fewer flags does not establish better accuracy or fewer false alarms.",
+    "UTC-hour bins assume the observed station uses a stable local offset. Humidity in the Chennai sample is derived, not an independent sensor measurement.",
+    "The candidate is experimental and is not used by the live detector."
+  ]
+}

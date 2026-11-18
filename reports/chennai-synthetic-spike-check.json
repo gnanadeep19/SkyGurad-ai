@@ -1,0 +1,226 @@
+{
+  "dataset": "chennai-ghcnh-2024-02.csv",
+  "sha256": "cc35b0c5dcb9e171f839e13aa7c3ac621d7653cfa24dc6fd43f2eac8c9f76209",
+  "date_utc": "2024-02-20",
+  "evaluated_at": "2026-11-13T05:04:59.560Z",
+  "cases": [
+    {
+      "timestamp": "2024-02-20T00:00:00.000Z",
+      "synthetic_temperature_increase_c": 5,
+      "original": {
+        "current_flagged": false,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T00:00:00.000Z",
+      "synthetic_temperature_increase_c": 10,
+      "original": {
+        "current_flagged": false,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T03:00:00.000Z",
+      "synthetic_temperature_increase_c": 5,
+      "original": {
+        "current_flagged": false,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T03:00:00.000Z",
+      "synthetic_temperature_increase_c": 10,
+      "original": {
+        "current_flagged": false,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T06:00:00.000Z",
+      "synthetic_temperature_increase_c": 5,
+      "original": {
+        "current_flagged": true,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T06:00:00.000Z",
+      "synthetic_temperature_increase_c": 10,
+      "original": {
+        "current_flagged": true,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T09:00:00.000Z",
+      "synthetic_temperature_increase_c": 5,
+      "original": {
+        "current_flagged": true,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T09:00:00.000Z",
+      "synthetic_temperature_increase_c": 10,
+      "original": {
+        "current_flagged": true,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T12:00:00.000Z",
+      "synthetic_temperature_increase_c": 5,
+      "original": {
+        "current_flagged": true,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T12:00:00.000Z",
+      "synthetic_temperature_increase_c": 10,
+      "original": {
+        "current_flagged": true,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T15:00:00.000Z",
+      "synthetic_temperature_increase_c": 5,
+      "original": {
+        "current_flagged": false,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T15:00:00.000Z",
+      "synthetic_temperature_increase_c": 10,
+      "original": {
+        "current_flagged": false,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T18:00:00.000Z",
+      "synthetic_temperature_increase_c": 5,
+      "original": {
+        "current_flagged": false,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T18:00:00.000Z",
+      "synthetic_temperature_increase_c": 10,
+      "original": {
+        "current_flagged": false,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T21:00:00.000Z",
+      "synthetic_temperature_increase_c": 5,
+      "original": {
+        "current_flagged": true,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    },
+    {
+      "timestamp": "2024-02-20T21:00:00.000Z",
+      "synthetic_temperature_increase_c": 10,
+      "original": {
+        "current_flagged": true,
+        "candidate_flagged": false
+      },
+      "injected": {
+        "current_flagged": true,
+        "candidate_flagged": true
+      }
+    }
+  ],
+  "summary": [
+    {
+      "synthetic_temperature_increase_c": 5,
+      "cases": 8,
+      "current_originally_flagged": 4,
+      "candidate_originally_flagged": 0,
+      "current_flagged_after_injection": 8,
+      "candidate_flagged_after_injection": 8
+    },
+    {
+      "synthetic_temperature_increase_c": 10,
+      "cases": 8,
+      "current_originally_flagged": 4,
+      "candidate_originally_flagged": 0,
+      "current_flagged_after_injection": 8,
+      "candidate_flagged_after_injection": 8
+    }
+  ],
+  "notes": [
+    "Each replay changes one temperature reading only; the rest of the historical input is unchanged.",
+    "Humidity in this sample was derived from the original temperature and dew point; keeping it unchanged after a temperature perturbation may create physical inconsistency and influence multivariate detection.",
+    "These are synthetic, single-reading temperature increases, not verified physical sensor faults; the counts are not real-world recall or accuracy.",
+    "Some unmodified observations were already flagged; compare the original and injected results.",
+    "The current and experimental detectors have different score scales and thresholds; the experimental detector is not deployed.",
+    "The eight selected hours are from one station on one day and are not a representative sample of all weather or fault types."
+  ]
+}

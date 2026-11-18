@@ -1,0 +1,41 @@
+﻿import { promises as fs } from "node:fs";
+import path from "node:path";
+import { spawn } from "node:child_process";
+import { randomBytes } from "node:crypto";
+import pg from "pg";
+const root=process.cwd();
+const line=(await fs.readFile(path.join(root,".env.skyguard.local"),"utf8")).split(/\r?\n/).find((item)=>item.startsWith("DATABASE_URL="));
+if(!line) throw new Error("Project-local database configuration not found.");
+const target=new URL(line.slice("DATABASE_URL=".length));
+if(target.hostname!=="127.0.0.1" || target.port!=="55432" || target.username!=="skyguard" || target.pathname!=="/skyguard") throw new Error("Refusing to back up a database outside the expected project-local instance.");
+const expectedDirectory=path.resolve(root,"data/postgres-local/cluster");
+const adminUrl=new URL(target); adminUrl.pathname="/postgres";
+const source=new pg.Client({connectionString:target.toString()}), admin=new pg.Client({connectionString:adminUrl.toString()});
+const backupDir=path.join(root,"data/postgres-local/backups");
+if (!(await fs.stat(backupDir)).isDirectory()) throw new Error("The protected local backup directory is unavailable.");
+const suffix=randomBytes(4).toString("hex");
+const backup=path.join(backupDir,`skyguard-${new Date().toISOString().replace(/[:.]/g,"-")}-${suffix}.dump`);
+const restoreName=`skyguard_verify_${suffix}`;
+const env={...process.env,PGHOST:target.hostname,PGPORT:target.port,PGUSER:decodeURIComponent(target.username),PGPASSWORD:decodeURIComponent(target.password),PGDATABASE:"skyguard"};
+const run=(file,args)=>new Promise((resolve,reject)=>{ const child=spawn(file,args,{env,windowsHide:true,stdio:["ignore","ignore","pipe"]}); let err=""; child.stderr.on("data",(chunk)=>{err+=String(chunk);}); child.on("error",reject); child.on("close",(code)=>code===0?resolve():reject(new Error(`${path.basename(file)} failed (exit ${code}): ${err.replaceAll(env.PGPASSWORD,"[redacted]").slice(0,400)}`))); });
+const counts=async (client)=>{ const result=await client.query("SELECT (SELECT count(*)::int FROM observations) AS observations,(SELECT count(*)::int FROM observation_events) AS quality_events,(SELECT count(*)::int FROM anomaly_results) AS results,(SELECT count(*)::int FROM alerts) AS alerts,(SELECT count(*)::int FROM audit_events) AS audit_events"); return result.rows[0]; };
+let created=false, success=false, restored;
+try {
+  await admin.connect(); const info=await admin.query("SHOW data_directory");
+  if(path.resolve(info.rows[0].data_directory).toLowerCase()!==expectedDirectory.toLowerCase()) throw new Error("The database server is not the expected project-local cluster.");
+  await source.connect(); const original=await counts(source);
+  await run(path.join(root,"data/postgres-local/pgsql/bin/pg_dump.exe"),["--format=custom","--file",backup]);
+  const exists=await admin.query("SELECT 1 FROM pg_database WHERE datname=$1",[restoreName]); if(exists.rows.length) throw new Error("Verification database name already exists.");
+  await admin.query(`CREATE DATABASE "${restoreName}"`); created=true;
+  await run(path.join(root,"data/postgres-local/pgsql/bin/pg_restore.exe"),["--exit-on-error","--no-owner","--no-privileges","--dbname",restoreName,backup]);
+  const restoreUrl=new URL(target); restoreUrl.pathname=`/${restoreName}`; restored=new pg.Client({connectionString:restoreUrl.toString()}); await restored.connect();
+  const restoredCounts=await counts(restored);
+  if(JSON.stringify(original)!==JSON.stringify(restoredCounts)) throw new Error("Restored database counts do not match the source; keep the verification database for inspection.");
+  const settingsOriginal=await source.query("SELECT settings FROM detector_settings WHERE id=1"),settingsRestored=await restored.query("SELECT settings FROM detector_settings WHERE id=1");
+  if(JSON.stringify(settingsOriginal.rows)!==JSON.stringify(settingsRestored.rows)) throw new Error("Restored settings do not match the source.");
+  success=true; console.log(`Backup and isolated restore verified: ${original.observations} observations, ${original.quality_events} quality events, ${original.results} results, ${original.alerts} alerts, ${original.audit_events} audit events.`); console.log(`Backup file: ${backup}`);
+} finally {
+  if(restored) await restored.end(); await source.end();
+  if(created && success && /^skyguard_verify_[a-f0-9]{8}$/.test(restoreName)) await admin.query(`DROP DATABASE "${restoreName}"`);
+  await admin.end();
+}

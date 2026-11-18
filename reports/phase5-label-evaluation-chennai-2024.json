@@ -1,0 +1,294 @@
+{
+  "evaluated_at": "2026-11-13T14:34:13.846Z",
+  "dataset": "chennai-ghcnh-january-2024.csv",
+  "sha256": "b06f4e60da9e9f5a4e11360eafb86d14e678e828b6c581671935472e5905204f",
+  "station_id": "INI0000VOMM",
+  "split": {
+    "train": {
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2024-01-19T09:00:00Z",
+      "windows": 140
+    },
+    "validation": {
+      "start": "2024-01-19T12:00:00Z",
+      "end": "2024-01-25T15:00:00Z",
+      "windows": 50
+    },
+    "test": {
+      "start": "2024-01-25T18:00:00Z",
+      "end": "2024-01-31T21:00:00Z",
+      "windows": 50
+    }
+  },
+  "config": {
+    "window_size": 8,
+    "maximum_gap_hours": 6,
+    "epochs": 8,
+    "scaler": {
+      "mean": [
+        25.789189189189152,
+        78.76351351351352,
+        1011.9114864864866
+      ],
+      "std": [
+        2.355073165074941,
+        12.826472565208007,
+        1.4670490535401508
+      ]
+    },
+    "threshold_method": "95th percentile of validation scores per method; ties may yield different flag counts",
+    "thresholds": {
+      "rules": 2.416876490586192,
+      "isolation_forest_combined": 0.48,
+      "lstm": 3.5229156721422488,
+      "autoencoder": 0.9963451745631021
+    }
+  },
+  "models": {
+    "rules": "Largest standardized one-step change",
+    "isolation_forest_combined": "Existing rolling Isolation Forest plus robust station baseline",
+    "lstm": {
+      "description": "Small LSTM next-reading predictor",
+      "parameters": 198
+    },
+    "autoencoder": {
+      "description": "Small dense window reconstruction autoencoder",
+      "parameters": 318
+    }
+  },
+  "training_losses": [
+    {
+      "epoch": 1,
+      "lstm": 0.9967889336259197,
+      "autoencoder": 0.9632807406230331
+    },
+    {
+      "epoch": 2,
+      "lstm": 0.9954045338551916,
+      "autoencoder": 0.9073585546517792
+    },
+    {
+      "epoch": 3,
+      "lstm": 0.9940256174486549,
+      "autoencoder": 0.8397714973934534
+    },
+    {
+      "epoch": 4,
+      "lstm": 0.9923763848801201,
+      "autoencoder": 0.7686726840376616
+    },
+    {
+      "epoch": 5,
+      "lstm": 0.9902825046700384,
+      "autoencoder": 0.7029261869977491
+    },
+    {
+      "epoch": 6,
+      "lstm": 0.9875692858909417,
+      "autoencoder": 0.6457438730401218
+    },
+    {
+      "epoch": 7,
+      "lstm": 0.9840434619159617,
+      "autoencoder": 0.5971568332432527
+    },
+    {
+      "epoch": 8,
+      "lstm": 0.9794993823589034,
+      "autoencoder": 0.5562699795647744
+    }
+  ],
+  "unmodified_test_flags": {
+    "rules": {
+      "flagged": 0,
+      "scored": 50
+    },
+    "isolation_forest_combined": {
+      "flagged": 0,
+      "scored": 50
+    },
+    "lstm": {
+      "flagged": 7,
+      "scored": 50
+    },
+    "autoencoder": {
+      "flagged": 40,
+      "scored": 50
+    }
+  },
+  "labeled_test_evaluation": {
+    "labeled_test_observations": 0,
+    "unknown_test_observations": 50,
+    "positive_labels": 0,
+    "negative_labels": 0,
+    "methods": {
+      "rules": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "true_negative": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "isolation_forest_combined": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "true_negative": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "lstm": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "true_negative": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "autoencoder": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "true_negative": 0,
+        "false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    }
+  },
+  "label_provenance": "Labels are supplied by the caller and are not independently verified by this script. Blank labels are unknown. Verify provenance and exclude synthetic labels from real-world claims.",
+  "synthetic_endpoint": "2024-01-28T21:00:00.000Z",
+  "synthetic_cases": [
+    {
+      "kind": "temperature_spike_plus_6_c",
+      "control": {
+        "rules": {
+          "score": 1.2951168847524683,
+          "flagged": false
+        },
+        "isolation_forest_combined": {
+          "score": 0.21,
+          "flagged": false
+        },
+        "lstm": {
+          "score": 0.8355817761247893,
+          "flagged": false
+        },
+        "autoencoder": {
+          "score": 1.738244857325011,
+          "flagged": true
+        }
+      },
+      "injected": {
+        "rules": {
+          "score": 2.1655378166723382,
+          "flagged": false
+        },
+        "isolation_forest_combined": {
+          "score": 0.35,
+          "flagged": false
+        },
+        "lstm": {
+          "score": 2.021618269928473,
+          "flagged": false
+        },
+        "autoencoder": {
+          "score": 2.0626207321757235,
+          "flagged": true
+        }
+      }
+    },
+    {
+      "kind": "humidity_frozen_last_5_readings",
+      "control": {
+        "rules": {
+          "score": 1.2951168847524683,
+          "flagged": false
+        },
+        "isolation_forest_combined": {
+          "score": 0.21,
+          "flagged": false
+        },
+        "lstm": {
+          "score": 0.8355817761247893,
+          "flagged": false
+        },
+        "autoencoder": {
+          "score": 1.738244857325011,
+          "flagged": true
+        }
+      },
+      "injected": {
+        "rules": {
+          "score": 1.2951168847524683,
+          "flagged": false
+        },
+        "isolation_forest_combined": {
+          "score": 0.27,
+          "flagged": false
+        },
+        "lstm": {
+          "score": 1.3702235087744281,
+          "flagged": false
+        },
+        "autoencoder": {
+          "score": 2.114109722868064,
+          "flagged": true
+        }
+      }
+    },
+    {
+      "kind": "pressure_ramp_plus_4_hpa",
+      "control": {
+        "rules": {
+          "score": 1.2951168847524683,
+          "flagged": false
+        },
+        "isolation_forest_combined": {
+          "score": 0.21,
+          "flagged": false
+        },
+        "lstm": {
+          "score": 0.8355817761247893,
+          "flagged": false
+        },
+        "autoencoder": {
+          "score": 1.738244857325011,
+          "flagged": true
+        }
+      },
+      "injected": {
+        "rules": {
+          "score": 0.9056080472329358,
+          "flagged": false
+        },
+        "isolation_forest_combined": {
+          "score": 0.35,
+          "flagged": false
+        },
+        "lstm": {
+          "score": 5.965376318311193,
+          "flagged": true
+        },
+        "autoencoder": {
+          "score": 4.332976583044894,
+          "flagged": true
+        }
+      }
+    }
+  ],
+  "missing_data": "Windows with missing measurements or gaps over six hours are excluded; no neural score is produced for them.",
+  "limitations": [
+    "Unlabeled observations cannot establish false positives or missed faults; label provenance must be independently verified.",
+    "Synthetic changes are demonstrations, not verified sensor failures; a single endpoint cannot establish accuracy or detection delay.",
+    "Thresholds are fit independently on validation data; 95th-percentile matching is approximate and does not equalize false alarm rates.",
+    "Both neural models are trained only on the first 60% and calibrated on the next 20%; the Isolation Forest is the existing rolling model and refits on earlier observations throughout the replay.",
+    "The split is within one station; it does not establish generalization to unseen stations.",
+    "If humidity is derived from temperature and dew point, independent synthetic changes can be physically inconsistent.",
+    "All models remain offline; no model is promoted or connected to operational alerts."
+  ]
+}

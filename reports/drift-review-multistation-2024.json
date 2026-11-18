@@ -1,0 +1,3689 @@
+{
+  "evaluated_at": "2026-11-13T10:44:09.107Z",
+  "method": "Experimental same-UTC-hour residual change; thresholds fixed before this evaluation",
+  "thresholds": {
+    "temperature": 1,
+    "humidity": 5,
+    "pressure": 2
+  },
+  "target_selection": "Days 15, 20 and 25 at 21:00 UTC; last reading at or before target within three hours, selected without examining outcomes",
+  "datasets": [
+    {
+      "dataset": "chennai-ghcnh-january-2024.csv",
+      "sha256": "b06f4e60da9e9f5a4e11360eafb86d14e678e828b6c581671935472e5905204f",
+      "station_id": "INI0000VOMM",
+      "month": "2024-01",
+      "rows": 248,
+      "windows": [
+        {
+          "target": "2024-01-15T21:00:00Z",
+          "actual_end": "2024-01-15T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "review",
+                "change": -1.3499999999999996,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -3.3499999999999996,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "review",
+                "change": -1.3499999999999996,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": 0.9249999999999989,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "review",
+                "change": -9.5,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.85,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -17.8125,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "review",
+                "change": -9.5,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.85,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": null,
+              "skipped": "Ramp would exceed broad input validation limits."
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.9249999999999545,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -4.525000000000034,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.9249999999999545,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.224999999999966,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-01-20T21:00:00Z",
+          "actual_end": "2024-01-20T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.47499999999999964,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.950000000000001,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.47499999999999964,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 1.0999999999999996,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": 2.5,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.65,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -7.1875,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": 2.5,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.65,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": null,
+              "skipped": "Ramp would exceed broad input validation limits."
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.15000000000009095,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -3.3999999999999773,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.15000000000009095,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.3500000000000227,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-01-25T21:00:00Z",
+          "actual_end": "2024-01-25T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.025000000000000355,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.45,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.0250000000000004,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.025000000000000355,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.45,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.4750000000000014,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": -2.75,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -11,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": -2.75,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": null,
+              "skipped": "Ramp would exceed broad input validation limits."
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 1.625,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -1.75,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 1.625,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 5,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "chennai-ghcnh-2024-02.csv",
+      "sha256": "cc35b0c5dcb9e171f839e13aa7c3ac621d7653cfa24dc6fd43f2eac8c9f76209",
+      "station_id": "INI0000VOMM",
+      "month": "2024-02",
+      "rows": 230,
+      "windows": [
+        {
+          "target": "2024-02-15T21:00:00Z",
+          "actual_end": "2024-02-15T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.07499999999999751,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.6,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.0250000000000004,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.07499999999999751,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.6,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.4499999999999993,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": -2.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -10.9375,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": -2.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 8.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.85,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.37499999999982947,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -3.4250000000000114,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.37499999999982947,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.3249999999999886,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-02-20T21:00:00Z",
+          "actual_end": "2024-02-20T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.27500000000000036,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.45,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -1.8249999999999993,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.27500000000000036,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.45,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 1.950000000000001,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": -1.5,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.6,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -6.5625,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": -1.5,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.6,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 7.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.44999999999998863,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -4.175000000000011,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.44999999999998863,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.7999999999999545,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-02-25T21:00:00Z",
+          "actual_end": "2024-02-25T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.42499999999999893,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.55,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -3.0999999999999996,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.42499999999999893,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.55,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.1250000000000018,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.9,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": 3.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -8.0625,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": 3.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 15.4375,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.85,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.8249999999999886,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.9,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.5500000000000114,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.8249999999999886,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.9,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 4.199999999999989,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "ghcnh-INI0000VOMM-2024-07.csv",
+      "sha256": "87456577c09d2f750a4e3d851225bf0efa11c8ec790e4e53f16bcaac7621f8d7",
+      "station_id": "INI0000VOMM",
+      "month": "2024-07",
+      "rows": 238,
+      "windows": [
+        {
+          "target": "2024-07-15T21:00:00Z",
+          "actual_end": "2024-07-15T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.5249999999999986,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.45,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.7749999999999986,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.5249999999999986,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.45,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 1.7250000000000014,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": 1.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.55,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -7.1875,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": 1.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.55,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": null,
+              "skipped": "Ramp would exceed broad input validation limits."
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.6999999999999318,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -4.324999999999989,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.6999999999999318,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.3249999999999886,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-07-20T21:00:00Z",
+          "actual_end": "2024-07-20T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 1,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "simulated": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 1,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 1,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "simulated": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 1,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 5,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "simulated": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 5,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 5,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "simulated": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 5,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 2,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "simulated": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 2,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 2,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "simulated": {
+                "status": "insufficient",
+                "change": null,
+                "threshold": 2,
+                "samples": 7,
+                "consistency": null,
+                "reason": "The latest 24-hour window has a gap over six hours."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-07-25T21:00:00Z",
+          "actual_end": "2024-07-25T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.8499999999999996,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.65,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -3.5500000000000025,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.8499999999999996,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.65,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 1.6000000000000014,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.85,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "review",
+                "change": 8,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -2.6875,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "review",
+                "change": 8,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 16.1875,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.9499999999999318,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.65,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.574999999999932,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.9499999999999318,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.65,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 4.525000000000034,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "ghcnh-AEI0000OMDB-2024-01.csv",
+      "sha256": "cfcba638ea6c7b711fa76cf14baa4b84e8d15b7eebcf34c7f083e1f4fac8518b",
+      "station_id": "AEI0000OMDB",
+      "month": "2024-01",
+      "rows": 248,
+      "windows": [
+        {
+          "target": "2024-01-15T21:00:00Z",
+          "actual_end": "2024-01-15T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.7250000000000032,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.6,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -1.5250000000000004,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.7250000000000032,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.6,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.424999999999999,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "review",
+                "change": 16.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": 6.6875,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.5,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "review",
+                "change": 16.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 25.625,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.85,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.9000000000000341,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.9,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -4.2000000000000455,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.9000000000000341,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.9,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.5499999999999545,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-01-20T21:00:00Z",
+          "actual_end": "2024-01-20T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "review",
+                "change": 1.1249999999999964,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -1.6249999999999964,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "review",
+                "change": 1.1249999999999964,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.3749999999999964,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": -1.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.6,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -11.1875,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.85,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": -1.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.6,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 8.0625,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.09999999999990905,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -3.400000000000148,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.09999999999990905,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.349999999999909,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-01-25T21:00:00Z",
+          "actual_end": "2024-01-25T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "review",
+                "change": 2.049999999999999,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.85,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -0.6000000000000032,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.65,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "review",
+                "change": 2.049999999999999,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.85,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 4.625,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": -2.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.4,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -12.625,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": -2.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.4,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 9,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.75,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.47500000000002274,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -3.9250000000000114,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.47500000000002274,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.8249999999999886,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "ghcnh-AEI0000OMDB-2024-07.csv",
+      "sha256": "355f58f541bde0ad7994e79df6f1a7498ad0dc2980bf01c7c3fc0e8cff72b0e6",
+      "station_id": "AEI0000OMDB",
+      "month": "2024-07",
+      "rows": 237,
+      "windows": [
+        {
+          "target": "2024-07-15T21:00:00Z",
+          "actual_end": "2024-07-15T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.5249999999999915,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.6,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -1.7250000000000085,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.8,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.5249999999999915,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.6,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.7749999999999915,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.85,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "review",
+                "change": -15.75,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -25.0625,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.9,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "review",
+                "change": -15.75,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -4.4375,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.55,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 1.0000000000000568,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.375,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 1.0000000000000568,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 4.375,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-07-20T21:00:00Z",
+          "actual_end": "2024-07-20T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.5749999999999957,
+                "threshold": 1,
+                "samples": 8,
+                "consistency": 0.5625,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.4250000000000043,
+                "threshold": 1,
+                "samples": 8,
+                "consistency": 0.8125,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.5749999999999957,
+                "threshold": 1,
+                "samples": 8,
+                "consistency": 0.5625,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.349999999999998,
+                "threshold": 1,
+                "samples": 8,
+                "consistency": 0.875,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": -3.5,
+                "threshold": 5,
+                "samples": 8,
+                "consistency": 0.5,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -12.625,
+                "threshold": 5,
+                "samples": 8,
+                "consistency": 0.75,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": -3.5,
+                "threshold": 5,
+                "samples": 8,
+                "consistency": 0.5,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 7.25,
+                "threshold": 5,
+                "samples": 8,
+                "consistency": 0.8125,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 1.4499999999999886,
+                "threshold": 2,
+                "samples": 8,
+                "consistency": 1,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -1.6499999999999773,
+                "threshold": 2,
+                "samples": 8,
+                "consistency": 1,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 1.4499999999999886,
+                "threshold": 2,
+                "samples": 8,
+                "consistency": 1,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 5.125,
+                "threshold": 2,
+                "samples": 8,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-07-25T21:00:00Z",
+          "actual_end": "2024-07-25T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "review",
+                "change": 2.375,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": 0.2749999999999986,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.5,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "review",
+                "change": 2.375,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 0.95,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 4.974999999999994,
+                "threshold": 1,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": -4.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.55,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -15.5,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.7,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": -4.25,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.55,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": 7,
+                "threshold": 5,
+                "samples": 9,
+                "consistency": 0.65,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.9750000000000796,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.9,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.224999999999966,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.9750000000000796,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 0.9,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 4.525000000000034,
+                "threshold": 2,
+                "samples": 9,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "ghcnh-SNI0000WSSS-2024-01.csv",
+      "sha256": "bf7ba6ffb10aa2cc306ad2492585dc3502ccdfeae417c71a5455b6c864feb1a3",
+      "station_id": "SNI0000WSSS",
+      "month": "2024-01",
+      "rows": 744,
+      "windows": [
+        {
+          "target": "2024-01-15T21:00:00Z",
+          "actual_end": "2024-01-15T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.4250000000000007,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.8269230769230769,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -3.391666666666664,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.967948717948718,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.4250000000000007,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.8269230769230769,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 1.633333333333331,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.8269230769230769,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "review",
+                "change": 5.75,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.8653846153846154,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -3.1875,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.5833333333333334,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "review",
+                "change": 5.75,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.8653846153846154,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": null,
+              "skipped": "Ramp would exceed broad input validation limits."
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.14999999999986358,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.717948717948718,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -3.349999999999966,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": -0.14999999999986358,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.717948717948718,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.724999999999909,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-01-20T21:00:00Z",
+          "actual_end": "2024-01-20T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.5250000000000004,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.6217948717948718,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -1.4500000000000028,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.7371794871794872,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.5250000000000004,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.6217948717948718,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.733333333333336,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.9615384615384616,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "review",
+                "change": -8,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.8076923076923077,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -17.0625,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.9423076923076923,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "review",
+                "change": -8,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.8076923076923077,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": null,
+              "skipped": "Ramp would exceed broad input validation limits."
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.3749999999998863,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.7243589743589743,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.6749999999999545,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.3749999999998863,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.7243589743589743,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.5750000000000455,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-01-25T21:00:00Z",
+          "actual_end": "2024-01-25T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.2500000000000018,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.4935897435897436,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -3.4250000000000007,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.6923076923076923,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.2500000000000018,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.4935897435897436,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.7499999999999964,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.8205128205128205,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": -2.25,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.6089743589743589,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -11.3125,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.9038461538461539,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": -2.25,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.6089743589743589,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": null,
+              "skipped": "Ramp would exceed broad input validation limits."
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.8750000000001137,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.8397435897435898,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.3249999999999886,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.8750000000001137,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.8397435897435898,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 4.250000000000057,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.9807692307692307,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "ghcnh-SNI0000WSSS-2024-07.csv",
+      "sha256": "3e4d3346b6a5bc4617e51a2e74092eecb87e41bbb7f2fac38a3fb56c09c44881",
+      "station_id": "SNI0000WSSS",
+      "month": "2024-07",
+      "rows": 731,
+      "windows": [
+        {
+          "target": "2024-07-15T21:00:00Z",
+          "actual_end": "2024-07-15T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.07499999999999929,
+                "threshold": 1,
+                "samples": 24,
+                "consistency": 0.5625,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.216666666666672,
+                "threshold": 1,
+                "samples": 24,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.07499999999999929,
+                "threshold": 1,
+                "samples": 24,
+                "consistency": 0.5625,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 2.383333333333333,
+                "threshold": 1,
+                "samples": 24,
+                "consistency": 0.9444444444444444,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": 0.5,
+                "threshold": 5,
+                "samples": 24,
+                "consistency": 0.5416666666666666,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -8.5,
+                "threshold": 5,
+                "samples": 24,
+                "consistency": 0.8333333333333334,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": 0.5,
+                "threshold": 5,
+                "samples": 24,
+                "consistency": 0.5416666666666666,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 9.25,
+                "threshold": 5,
+                "samples": 24,
+                "consistency": 0.9513888888888888,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.4000000000000341,
+                "threshold": 2,
+                "samples": 24,
+                "consistency": 0.7152777777777778,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.3000000000000114,
+                "threshold": 2,
+                "samples": 24,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.4000000000000341,
+                "threshold": 2,
+                "samples": 24,
+                "consistency": 0.7152777777777778,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.775000000000034,
+                "threshold": 2,
+                "samples": 24,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-07-20T21:00:00Z",
+          "actual_end": "2024-07-20T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.17499999999999893,
+                "threshold": 1,
+                "samples": 22,
+                "consistency": 0.5916666666666667,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.5083333333333364,
+                "threshold": 1,
+                "samples": 22,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.17499999999999893,
+                "threshold": 1,
+                "samples": 22,
+                "consistency": 0.5916666666666667,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 1.8750000000000053,
+                "threshold": 1,
+                "samples": 22,
+                "consistency": 0.8416666666666667,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": 3.5,
+                "threshold": 5,
+                "samples": 22,
+                "consistency": 0.7333333333333333,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -5,
+                "threshold": 5,
+                "samples": 22,
+                "consistency": 0.6833333333333333,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": 3.5,
+                "threshold": 5,
+                "samples": 22,
+                "consistency": 0.7333333333333333,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 11.8125,
+                "threshold": 5,
+                "samples": 22,
+                "consistency": 0.9833333333333333,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.5749999999999886,
+                "threshold": 2,
+                "samples": 22,
+                "consistency": 0.8833333333333333,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.750000000000057,
+                "threshold": 2,
+                "samples": 22,
+                "consistency": 0.9916666666666667,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.5749999999999886,
+                "threshold": 2,
+                "samples": 22,
+                "consistency": 0.8833333333333333,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.6749999999999545,
+                "threshold": 2,
+                "samples": 22,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-07-25T21:00:00Z",
+          "actual_end": "2024-07-25T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.4750000000000014,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.6730769230769231,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.616666666666669,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.9935897435897436,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.4750000000000014,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.6730769230769231,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 1.8333333333333321,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": -0.75,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.5576923076923077,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -8.0625,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.9294871794871795,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": -0.75,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.5576923076923077,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 7.3125,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.9102564102564102,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.22500000000007958,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.6153846153846154,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.775000000000034,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 0.22500000000007958,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.6153846153846154,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.4499999999999886,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "ghcnh-UKI0000EGLL-2024-01.csv",
+      "sha256": "1aa98dd342a9fdb429987e15ebe3c796d13747c7d5aebbff9c31a579c1c18479",
+      "station_id": "UKI0000EGLL",
+      "month": "2024-01",
+      "rows": 741,
+      "windows": [
+        {
+          "target": "2024-01-15T21:00:00Z",
+          "actual_end": "2024-01-15T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.04999999999999982,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.5192307692307693,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.1083333333333334,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.7756410256410257,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.04999999999999982,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.5192307692307693,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 1.7750000000000004,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.8910256410256411,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "review",
+                "change": -18,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.9807692307692307,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -28.125,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.9935897435897436,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "review",
+                "change": -18,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.9807692307692307,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -12.4375,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.8525641025641025,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "no_shift",
+                "change": 1.7749999999999773,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.6666666666666666,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -1.3250000000001023,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "no_shift",
+                "change": 1.7749999999999773,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.6666666666666666,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 5.050000000000068,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.7628205128205128,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-01-20T21:00:00Z",
+          "actual_end": "2024-01-20T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "review",
+                "change": 2.75,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.9423076923076923,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": 0.16666666666666652,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.5769230769230769,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "review",
+                "change": 2.75,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.9423076923076923,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 4.566666666666666,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": -3.5,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.5769230769230769,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -10.1875,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.8397435897435898,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": -3.5,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.5769230769230769,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": 4.3125,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.6987179487179487,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "review",
+                "change": -4.349999999999909,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -7.474999999999909,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "review",
+                "change": -4.349999999999909,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -1.1999999999999886,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.9230769230769231,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-01-25T21:00:00Z",
+          "actual_end": "2024-01-25T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "review",
+                "change": 3.375000000000001,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.9551282051282052,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": 0.8166666666666673,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.7307692307692307,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "review",
+                "change": 3.375000000000001,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.9551282051282052,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 6.108333333333333,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "no_shift",
+                "change": 2.25,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.7564102564102564,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -7.375,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.8974358974358975,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "no_shift",
+                "change": 2.25,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.7564102564102564,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": null,
+              "skipped": "Ramp would exceed broad input validation limits."
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "review",
+                "change": -3.0750000000000455,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.8910256410256411,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -5.975000000000023,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.9871794871794872,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "review",
+                "change": -3.0750000000000455,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.8910256410256411,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": 0.17499999999995453,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.4807692307692308,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "ghcnh-UKI0000EGLL-2024-07.csv",
+      "sha256": "e8055a41328661b905b172aa33c6adaf52c0cad2b526623720e335ea020119e3",
+      "station_id": "UKI0000EGLL",
+      "month": "2024-07",
+      "rows": 693,
+      "windows": [
+        {
+          "target": "2024-07-15T21:00:00Z",
+          "actual_end": "2024-07-15T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.9500000000000011,
+                "threshold": 1,
+                "samples": 24,
+                "consistency": 0.5625,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -1.466666666666665,
+                "threshold": 1,
+                "samples": 24,
+                "consistency": 0.7152777777777778,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": 0.9500000000000011,
+                "threshold": 1,
+                "samples": 24,
+                "consistency": 0.5625,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 3.4333333333333327,
+                "threshold": 1,
+                "samples": 24,
+                "consistency": 0.8541666666666666,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "review",
+                "change": 11.75,
+                "threshold": 5,
+                "samples": 24,
+                "consistency": 0.7777777777777778,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": 4.9375,
+                "threshold": 5,
+                "samples": 24,
+                "consistency": 0.6388888888888888,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "review",
+                "change": 11.75,
+                "threshold": 5,
+                "samples": 24,
+                "consistency": 0.7777777777777778,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": null,
+              "skipped": "Ramp would exceed broad input validation limits."
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "review",
+                "change": -4.099999999999966,
+                "threshold": 2,
+                "samples": 24,
+                "consistency": 0.9652777777777778,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -6.525000000000034,
+                "threshold": 2,
+                "samples": 24,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "review",
+                "change": -4.099999999999966,
+                "threshold": 2,
+                "samples": 24,
+                "consistency": 0.9652777777777778,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -0.30000000000001137,
+                "threshold": 2,
+                "samples": 24,
+                "consistency": 0.6736111111111112,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-07-20T21:00:00Z",
+          "actual_end": "2024-07-20T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.7999999999999989,
+                "threshold": 1,
+                "samples": 21,
+                "consistency": 0.75,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -2.4749999999999996,
+                "threshold": 1,
+                "samples": 21,
+                "consistency": 0.9259259259259259,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "no_shift",
+                "change": -0.7999999999999989,
+                "threshold": 1,
+                "samples": 21,
+                "consistency": 0.75,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": 0.7416666666666654,
+                "threshold": 1,
+                "samples": 21,
+                "consistency": 0.5925925925925926,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "review",
+                "change": 10.25,
+                "threshold": 5,
+                "samples": 21,
+                "consistency": 0.8148148148148148,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": 3.125,
+                "threshold": 5,
+                "samples": 21,
+                "consistency": 0.6481481481481481,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "review",
+                "change": 10.25,
+                "threshold": 5,
+                "samples": 21,
+                "consistency": 0.8148148148148148,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 16.5625,
+                "threshold": 5,
+                "samples": 21,
+                "consistency": 0.9537037037037037,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "review",
+                "change": -2.449999999999932,
+                "threshold": 2,
+                "samples": 21,
+                "consistency": 0.9166666666666666,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -4.799999999999898,
+                "threshold": 2,
+                "samples": 21,
+                "consistency": 0.9629629629629629,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "review",
+                "change": -2.449999999999932,
+                "threshold": 2,
+                "samples": 21,
+                "consistency": 0.9166666666666666,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -0.25,
+                "threshold": 2,
+                "samples": 21,
+                "consistency": 0.6296296296296297,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            }
+          ]
+        },
+        {
+          "target": "2024-07-25T21:00:00Z",
+          "actual_end": "2024-07-25T21:00:00.000Z",
+          "skipped": null,
+          "cases": [
+            {
+              "field": "temperature",
+              "delta": -4,
+              "control": {
+                "status": "review",
+                "change": -3.2499999999999982,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.9487179487179487,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -5.133333333333332,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "temperature",
+              "delta": 4,
+              "control": {
+                "status": "review",
+                "change": -3.2499999999999982,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.9487179487179487,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -1.033333333333335,
+                "threshold": 1,
+                "samples": 25,
+                "consistency": 0.6346153846153846,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": -15,
+              "control": {
+                "status": "review",
+                "change": 24.25,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": 15.75,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 0.9935897435897436,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "humidity",
+              "delta": 15,
+              "control": {
+                "status": "review",
+                "change": 24.25,
+                "threshold": 5,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": null,
+              "skipped": "Ramp would exceed broad input validation limits."
+            },
+            {
+              "field": "pressure",
+              "delta": -6,
+              "control": {
+                "status": "review",
+                "change": -4.14999999999992,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.9743589743589743,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "review",
+                "change": -6.874999999999886,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 1,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "skipped": null
+            },
+            {
+              "field": "pressure",
+              "delta": 6,
+              "control": {
+                "status": "review",
+                "change": -4.14999999999992,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.9743589743589743,
+                "reason": "A sustained change relative to the earlier same-hour baseline warrants review."
+              },
+              "simulated": {
+                "status": "no_shift",
+                "change": -1.5,
+                "threshold": 2,
+                "samples": 25,
+                "consistency": 0.8717948717948718,
+                "reason": "The recent pattern did not meet this experimental review rule."
+              },
+              "skipped": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "field": "temperature",
+      "delta": -4,
+      "cases": 27,
+      "out_of_range": 0,
+      "insufficient": 1,
+      "originally_flagged": 7,
+      "eligible": 19,
+      "new_flags": 18,
+      "suppressed_flags": 4
+    },
+    {
+      "field": "temperature",
+      "delta": 4,
+      "cases": 27,
+      "out_of_range": 0,
+      "insufficient": 1,
+      "originally_flagged": 7,
+      "eligible": 19,
+      "new_flags": 18,
+      "suppressed_flags": 2
+    },
+    {
+      "field": "humidity",
+      "delta": -15,
+      "cases": 27,
+      "out_of_range": 0,
+      "insufficient": 1,
+      "originally_flagged": 10,
+      "eligible": 16,
+      "new_flags": 15,
+      "suppressed_flags": 5
+    },
+    {
+      "field": "humidity",
+      "delta": 15,
+      "cases": 27,
+      "out_of_range": 10,
+      "insufficient": 1,
+      "originally_flagged": 5,
+      "eligible": 11,
+      "new_flags": 9,
+      "suppressed_flags": 1
+    },
+    {
+      "field": "pressure",
+      "delta": -6,
+      "cases": 27,
+      "out_of_range": 0,
+      "insufficient": 1,
+      "originally_flagged": 5,
+      "eligible": 21,
+      "new_flags": 18,
+      "suppressed_flags": 0
+    },
+    {
+      "field": "pressure",
+      "delta": 6,
+      "cases": 27,
+      "out_of_range": 0,
+      "insufficient": 1,
+      "originally_flagged": 5,
+      "eligible": 21,
+      "new_flags": 21,
+      "suppressed_flags": 5
+    }
+  ],
+  "limitations": [
+    "Historical windows are unlabeled; control flags are not measured false positives and synthetic new flags are not measured field recall.",
+    "Each synthetic ramp changes one variable over 24 hours independently; out-of-range cases are skipped, not clipped.",
+    "Humidity in these NOAA samples is derived from temperature and dew point; independent changes can be physically inconsistent.",
+    "Windows overlap in their baseline history and cannot be treated as independent trials. These station-months have been explored in earlier project experiments.",
+    "This evaluation does not change the live detector, stored telemetry, incidents, or notifications."
+  ]
+}

@@ -1,0 +1,1080 @@
+{
+  "evaluated_at": "2026-11-13T05:18:51.691Z",
+  "dataset": "chennai-ghcnh-2024-02.csv",
+  "sha256": "cc35b0c5dcb9e171f839e13aa7c3ac621d7653cfa24dc6fd43f2eac8c9f76209",
+  "calibration_dataset": "chennai-ghcnh-january-2024.csv",
+  "current_thresholds": {
+    "warning_score": 0.32,
+    "critical_score": 0.62,
+    "regional_fraction": 0.5
+  },
+  "candidate_threshold": 1.9879727647731142,
+  "singles": [
+    {
+      "field": "temperature",
+      "delta": 1,
+      "cases": 3,
+      "current_originally_flagged": 1,
+      "current_after": 1,
+      "current_new_flags": 0,
+      "candidate_originally_flagged": 0,
+      "candidate_after": 0,
+      "candidate_new_flags": 0
+    },
+    {
+      "field": "temperature",
+      "delta": -1,
+      "cases": 3,
+      "current_originally_flagged": 1,
+      "current_after": 0,
+      "current_new_flags": 0,
+      "candidate_originally_flagged": 0,
+      "candidate_after": 0,
+      "candidate_new_flags": 0
+    },
+    {
+      "field": "temperature",
+      "delta": 2,
+      "cases": 3,
+      "current_originally_flagged": 1,
+      "current_after": 1,
+      "current_new_flags": 0,
+      "candidate_originally_flagged": 0,
+      "candidate_after": 2,
+      "candidate_new_flags": 2
+    },
+    {
+      "field": "temperature",
+      "delta": -2,
+      "cases": 3,
+      "current_originally_flagged": 1,
+      "current_after": 0,
+      "current_new_flags": 0,
+      "candidate_originally_flagged": 0,
+      "candidate_after": 1,
+      "candidate_new_flags": 1
+    },
+    {
+      "field": "humidity",
+      "delta": 5,
+      "cases": 3,
+      "current_originally_flagged": 1,
+      "current_after": 1,
+      "current_new_flags": 0,
+      "candidate_originally_flagged": 0,
+      "candidate_after": 0,
+      "candidate_new_flags": 0
+    },
+    {
+      "field": "humidity",
+      "delta": -5,
+      "cases": 3,
+      "current_originally_flagged": 1,
+      "current_after": 1,
+      "current_new_flags": 0,
+      "candidate_originally_flagged": 0,
+      "candidate_after": 2,
+      "candidate_new_flags": 2
+    },
+    {
+      "field": "pressure",
+      "delta": 2,
+      "cases": 3,
+      "current_originally_flagged": 1,
+      "current_after": 1,
+      "current_new_flags": 0,
+      "candidate_originally_flagged": 0,
+      "candidate_after": 1,
+      "candidate_new_flags": 1
+    },
+    {
+      "field": "pressure",
+      "delta": -2,
+      "cases": 3,
+      "current_originally_flagged": 1,
+      "current_after": 2,
+      "current_new_flags": 1,
+      "candidate_originally_flagged": 0,
+      "candidate_after": 2,
+      "candidate_new_flags": 2
+    }
+  ],
+  "drifts": [
+    {
+      "field": "temperature",
+      "total_delta": 2,
+      "start_utc": "2024-02-15T00:00:00Z",
+      "current_first_new_flag_hours": 6,
+      "candidate_first_new_flag_hours": 12,
+      "current_control_flagged_steps": 1,
+      "candidate_control_flagged_steps": 1
+    },
+    {
+      "field": "humidity",
+      "total_delta": 10,
+      "start_utc": "2024-02-15T00:00:00Z",
+      "current_first_new_flag_hours": null,
+      "candidate_first_new_flag_hours": null,
+      "current_control_flagged_steps": 1,
+      "candidate_control_flagged_steps": 1
+    },
+    {
+      "field": "pressure",
+      "total_delta": 5,
+      "start_utc": "2024-02-15T00:00:00Z",
+      "current_first_new_flag_hours": 6,
+      "candidate_first_new_flag_hours": 9,
+      "current_control_flagged_steps": 1,
+      "candidate_control_flagged_steps": 1
+    },
+    {
+      "field": "temperature",
+      "total_delta": 2,
+      "start_utc": "2024-02-15T12:00:00Z",
+      "current_first_new_flag_hours": 24,
+      "candidate_first_new_flag_hours": 21,
+      "current_control_flagged_steps": 2,
+      "candidate_control_flagged_steps": 3
+    },
+    {
+      "field": "humidity",
+      "total_delta": 10,
+      "start_utc": "2024-02-15T12:00:00Z",
+      "current_first_new_flag_hours": null,
+      "candidate_first_new_flag_hours": 21,
+      "current_control_flagged_steps": 2,
+      "candidate_control_flagged_steps": 3
+    },
+    {
+      "field": "pressure",
+      "total_delta": 5,
+      "start_utc": "2024-02-15T12:00:00Z",
+      "current_first_new_flag_hours": 15,
+      "candidate_first_new_flag_hours": 15,
+      "current_control_flagged_steps": 2,
+      "candidate_control_flagged_steps": 3
+    }
+  ],
+  "cases": [
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T00:00:00Z",
+      "field": "temperature",
+      "delta": 1,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T00:00:00Z",
+      "field": "temperature",
+      "delta": -1,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T00:00:00Z",
+      "field": "temperature",
+      "delta": 2,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": true
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T00:00:00Z",
+      "field": "temperature",
+      "delta": -2,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T00:00:00Z",
+      "field": "humidity",
+      "delta": 5,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T00:00:00Z",
+      "field": "humidity",
+      "delta": -5,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": true
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T00:00:00Z",
+      "field": "pressure",
+      "delta": 2,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T00:00:00Z",
+      "field": "pressure",
+      "delta": -2,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": true,
+        "candidate": true
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T09:00:00Z",
+      "field": "temperature",
+      "delta": 1,
+      "original": {
+        "current": true,
+        "candidate": false
+      },
+      "injected": {
+        "current": true,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T09:00:00Z",
+      "field": "temperature",
+      "delta": -1,
+      "original": {
+        "current": true,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T09:00:00Z",
+      "field": "temperature",
+      "delta": 2,
+      "original": {
+        "current": true,
+        "candidate": false
+      },
+      "injected": {
+        "current": true,
+        "candidate": true
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T09:00:00Z",
+      "field": "temperature",
+      "delta": -2,
+      "original": {
+        "current": true,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": true
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T09:00:00Z",
+      "field": "humidity",
+      "delta": 5,
+      "original": {
+        "current": true,
+        "candidate": false
+      },
+      "injected": {
+        "current": true,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T09:00:00Z",
+      "field": "humidity",
+      "delta": -5,
+      "original": {
+        "current": true,
+        "candidate": false
+      },
+      "injected": {
+        "current": true,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T09:00:00Z",
+      "field": "pressure",
+      "delta": 2,
+      "original": {
+        "current": true,
+        "candidate": false
+      },
+      "injected": {
+        "current": true,
+        "candidate": true
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T09:00:00Z",
+      "field": "pressure",
+      "delta": -2,
+      "original": {
+        "current": true,
+        "candidate": false
+      },
+      "injected": {
+        "current": true,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T18:00:00Z",
+      "field": "temperature",
+      "delta": 1,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T18:00:00Z",
+      "field": "temperature",
+      "delta": -1,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T18:00:00Z",
+      "field": "temperature",
+      "delta": 2,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T18:00:00Z",
+      "field": "temperature",
+      "delta": -2,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T18:00:00Z",
+      "field": "humidity",
+      "delta": 5,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T18:00:00Z",
+      "field": "humidity",
+      "delta": -5,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": true
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T18:00:00Z",
+      "field": "pressure",
+      "delta": 2,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": false
+      }
+    },
+    {
+      "kind": "single_reading",
+      "timestamp": "2024-02-15T18:00:00Z",
+      "field": "pressure",
+      "delta": -2,
+      "original": {
+        "current": false,
+        "candidate": false
+      },
+      "injected": {
+        "current": false,
+        "candidate": true
+      }
+    },
+    {
+      "kind": "24_hour_drift",
+      "timestamp": "2024-02-15T00:00:00Z",
+      "field": "temperature",
+      "total_delta": 2,
+      "steps": [
+        {
+          "hours": 3,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 6,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 9,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 12,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 15,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 18,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 21,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 24,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "24_hour_drift",
+      "timestamp": "2024-02-15T00:00:00Z",
+      "field": "humidity",
+      "total_delta": 10,
+      "steps": [
+        {
+          "hours": 3,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 6,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 9,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 12,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 15,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 18,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 21,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 24,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        }
+      ]
+    },
+    {
+      "kind": "24_hour_drift",
+      "timestamp": "2024-02-15T00:00:00Z",
+      "field": "pressure",
+      "total_delta": 5,
+      "steps": [
+        {
+          "hours": 3,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 6,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 9,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 12,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 15,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 18,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 21,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 24,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "24_hour_drift",
+      "timestamp": "2024-02-15T12:00:00Z",
+      "field": "temperature",
+      "total_delta": 2,
+      "steps": [
+        {
+          "hours": 3,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 6,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 9,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 12,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 15,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 18,
+          "original": {
+            "current": true,
+            "candidate": true
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 21,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 24,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "24_hour_drift",
+      "timestamp": "2024-02-15T12:00:00Z",
+      "field": "humidity",
+      "total_delta": 10,
+      "steps": [
+        {
+          "hours": 3,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 6,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 9,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 12,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 15,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 18,
+          "original": {
+            "current": true,
+            "candidate": true
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 21,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 24,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "24_hour_drift",
+      "timestamp": "2024-02-15T12:00:00Z",
+      "field": "pressure",
+      "total_delta": 5,
+      "steps": [
+        {
+          "hours": 3,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 6,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 9,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "hours": 12,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 15,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 18,
+          "original": {
+            "current": true,
+            "candidate": true
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 21,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        },
+        {
+          "hours": 24,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Each replay alters one selected field only, either once or as a 24-hour ramp; every scenario is run separately using earlier readings only.",
+    "These are synthetic perturbations of unlabeled historical observations, not confirmed sensor faults or measurements of real-world accuracy.",
+    "A new flag is a flag at a perturbed timestamp that the same detector did not flag in the unmodified control.",
+    "Relative humidity is derived from the original temperature and dew point; modifying temperature or humidity alone can create physically inconsistent combinations.",
+    "The sample contains one station, three spike start times, two drift start times, and limited anomaly sizes; it does not characterize all faults, missed detections, or long-term drift.",
+    "The candidate threshold was fitted on January; February scenarios were not used to select it. The live detector remains unchanged."
+  ]
+}

@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>SkyGuard AI: Source-Aware Anomaly Triage for Automatic Weather Station Networks</title>
+<meta name="author" content="SkyGuard AI Project" />
+<!--
+  =====================================================================
+  HOW TO ADD YOUR DETAILS  (all four places are marked "EDIT:" below)
+  ---------------------------------------------------------------------
+  1. AUTHOR NAMES   -> <div class="authors">, first <span class="name">
+  2. DEPARTMENT/CITY-> <div class="authors">, <span class="aff">
+  3. E-MAIL         -> <div class="authors">, <span class="mail">
+  4. FIRST-PAGE NOTE-> <p class="firstnote"> (date, support, corresponding author)
+  5. ACKNOWLEDGMENT -> <h2>Acknowledgment</h2> near the end (guide, department, funding)
+  Keep the paper's factual wording about unlabelled data if you edit the text.
+  =====================================================================
+-->
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #e6e6e6; color: #000; font-family: "Times New Roman", Times, Georgia, serif; }
+  /* IEEE conference geometry: US Letter, 0.75in top, 1in bottom, 0.625in sides. */
+  @page { size: 8.5in 11in; margin: 0.75in 0.625in 1in; }
+  .paper { column-count: 2; column-gap: 0.25in; column-fill: auto; }
+  @media screen {
+    body { padding: 0.75in 0; }
+    .paper { width: 7.25in; margin: 0 auto; background: #fff; padding: 0.4in 0.5in; box-shadow: 0 1px 6px rgba(0,0,0,.2); }
+  }
+  @media print { body { background: #fff; } }
+
+  .titleblock { column-span: all; text-align: center; margin: 0 0 10px; }
+  h1.title { font-size: 22pt; font-weight: normal; line-height: 1.06; margin: 0 0 12px; letter-spacing: 0.005em; }
+  .authors { font-size: 11pt; line-height: 1.3; margin: 0 0 8px; }
+  .authors .name { display: block; }
+  .authors .aff { display: block; font-size: 9.5pt; font-style: italic; line-height: 1.25; }
+  .authors .mail { display: block; font-size: 9pt; }
+  .firstnote { font-size: 8pt; line-height: 1.16; text-align: justify; text-indent: 0; margin: 0 0 10px; }
+
+  p { font-size: 10pt; line-height: 1.125; margin: 0; text-align: justify; text-indent: 0.18in; hyphens: auto; orphans: 2; widows: 2; }
+  p.noindent { text-indent: 0; }
+
+  .abstract, .keywords { font-size: 9pt; font-weight: bold; text-align: justify; text-indent: 0; }
+  .abstract { margin: 0 0 8px; line-height: 1.13; }
+  .keywords { margin: 0 0 10px; }
+  .abstract .lab, .keywords .lab { font-style: italic; }
+
+  h2 {
+    font-size: 10pt; font-weight: normal; font-variant: small-caps;
+    text-align: center; margin: 10px 0 4px; letter-spacing: 0.02em;
+    break-after: avoid; break-inside: avoid;
+  }
+  h3 { font-size: 10pt; font-style: italic; font-weight: normal; text-align: left; margin: 7px 0 2px; break-after: avoid; }
+
+  figure { margin: 8px 0 9px; break-inside: avoid; }
+  figure.tbl { margin: 0 0 8px; }
+  figcaption, .tabcap { font-size: 8pt; line-height: 1.2; text-align: center; }
+  figcaption { margin: 4px 0 0; }
+  .tabcap { margin: 0 0 3px; font-variant: small-caps; }
+  .tabcap .num { font-variant: normal; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 7.4pt; line-height: 1.15; }
+  th, td { padding: 1.6px 3px; text-align: left; vertical-align: top; }
+  thead th { border-top: 0.6pt solid #000; border-bottom: 0.5pt solid #000; font-weight: normal; }
+  tbody tr:last-child td { border-bottom: 0.6pt solid #000; }
+  td.n, th.n { text-align: right; white-space: nowrap; }
+  td.c, th.c { text-align: center; }
+
+  .fig { border: 0.6pt solid #000; padding: 7px 8px; }
+  .box { border: 0.6pt solid #000; padding: 3px 5px; font-size: 7.6pt; line-height: 1.15; text-align: center; }
+  .row { display: grid; gap: 6px; }
+  .r3 { grid-template-columns: 1fr 1fr 1fr; }
+  .r2 { grid-template-columns: 1fr 1fr; }
+  .arrow { text-align: center; font-size: 8pt; line-height: 1.1; margin: 2px 0; }
+  .tiers { display: grid; gap: 5px; }
+
+  .eq { display: flex; align-items: baseline; margin: 2px 0 4px; font-size: 10pt; }
+  .eq .body { flex: 1; text-align: center; }
+  .eq .num { width: 0.32in; text-align: right; }
+  .math { font-size: 10pt; }
+  .small { font-size: 8pt; }
+
+  ol.contrib { margin: 2px 0 0; padding-left: 0.26in; font-size: 10pt; line-height: 1.125; }
+  ol.contrib li { margin: 0 0 2px; text-align: justify; }
+
+  .refs p { font-size: 7.9pt; line-height: 1.14; text-indent: -0.22in; padding-left: 0.22in; margin: 0 0 2.5px; text-align: justify; break-inside: avoid; }
+
+  pre.code { font-family: "Consolas", "Courier New", monospace; font-size: 7.2pt; line-height: 1.25; border-left: 1.5pt solid #000; padding: 3px 6px; margin: 3px 0 8px; white-space: pre-wrap; break-inside: avoid; }
+  p.srccap { font-size: 8pt; text-align: center; text-indent: 0; margin: 2px 0 10px; }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="titleblock">
+    <!-- EDIT: 1) your paper title (optional) -->
+    <h1 class="title">SkyGuard AI: Source-Aware Anomaly Triage for Automatic Weather Station Networks</h1>
+    <div class="authors">
+      <!-- EDIT: 2) replace with your name(s); use "and" before the last author -->
+      <span class="name">Author One and Author Two</span>
+      <!-- EDIT: 3) department, institution, city, country -->
+      <span class="aff">Department of Computer Science and Engineering, [Institution Name], [City], India</span>
+      <!-- EDIT: 4) e-mail address(es) -->
+      <span class="mail">{author.one, author.two}@example.edu</span>
+    </div>
+
+    <!-- EDIT: 5) optional IEEE first-page note: submission date, supervisor, funding -->
+    <p class="firstnote">Manuscript received 18 November 2026. This work was carried out as an undergraduate project in the Department of Computer Science and Engineering, [Institution Name]. Corresponding author: Author One (author.one@example.edu).</p>
+
+    <p class="abstract"><span class="lab">Abstract</span>—Automatic weather station (AWS) networks emit a continuous stream of temperature, relative humidity and pressure readings. A flagged reading may reflect unusual weather, a telemetry fault, or a failing sensor, and operational archives rarely record which of these occurred. We present SkyGuard AI, an open-source monitoring stack that treats the problem as <i>triage</i> rather than supervised classification. Ingestion validates and source-tags every observation, retaining rejected and duplicate inputs beside accepted rows. A hybrid detector combines a station-specific median/MAD baseline with a dependency-free Isolation Forest over six temporal and multivariate features, and a network-level spatial agreement term separates regional weather from localized anomalies. Flagged station readings are grouped into incidents carrying recorded evidence, an assignee, a review outcome and a retried e-mail outbox. The dashboard labels model estimates, submitted readings, replay and uploaded datasets separately and publishes no calibrated failure probability. A rolling replay of 248 NOAA Chennai observations flagged 30.8% of scored readings at default thresholds; across eight held-out station-months flag rates ranged from 27.1% to 54.3%. A matched-threshold comparison with an experimental same-hour baseline flagged the same total count on the development sample yet disagreed on 38 of 192 observations in each direction. Controlled perturbations and synthetic 24-hour ramps show that the decision boundary depends on station, field, time and direction. Because no sample carries verified fault labels, these are flag rates, not accuracy measures. An LSTM predictor and a window autoencoder were evaluated offline and deliberately not promoted. We close with the conditions under which a promotion or an accuracy claim would become defensible.</p>
+
+    <p class="keywords"><span class="lab">Index Terms</span>—Anomaly detection, automatic weather station, data quality, explainability, incident management, isolation forest, sensor networks, software architecture.</p>
+  </div>
+
+  <h2>I. Introduction</h2>
+  <p class="noindent">Automatic weather stations are now the primary source of surface observations for forecasting, agriculture and climate monitoring. National networks report temperature, humidity, pressure, wind and rainfall at minute-to-hourly cadence, and the World Meteorological Organization publishes the instrument and exposure guidance against which such measurements are judged [1]. In India, the India Meteorological Department operates AWS and automatic rain gauge networks that feed district-level advisories, and the measurement programme specifies siting, calibration and maintenance routines for the sensors involved [2]. Density and cadence create an operational burden of their own: a network of a few hundred stations produces tens of thousands of readings per day, and no human can inspect each one.</p>
+
+  <p>Anomaly detection is usually framed as supervised learning, which presumes that historical faults were labelled. In weather-station operations this rarely holds. A pressure drop may be a synoptic change, a blocked intake, a calibration shift, or a payload parsing error; the archive stores the number, not the cause. Even established quality-control products rely on internal consistency checks, comparison with neighbouring stations and manual investigation rather than verified fault labels [3], [4]. A detector that returns a scalar is therefore not answering the question an operator actually asks, which is: <i>should I spend an hour on this, and what should I compare it against?</i></p>
+
+  <p>A second problem is interpretive. A score that resembles a probability invites over-trust, and a threshold that flags a third of all readings invites dismissal. Both failures worsen when sources are mixed: a modelled grid value from a public weather API, a submitted station reading and a demonstration replay can share a chart although only one originates in a physical instrument. Mixing them is easy to implement and hard to detect afterwards, because the numbers look plausible either way. Our position is that a monitoring system should make provenance and uncertainty legible at the point of decision, and should decline to publish a number it cannot calibrate.</p>
+
+  <p>SkyGuard AI was built around that position, for a bundled network of one hundred Indian station locations spanning six regions: North, South, East, West, Northeast and Central. The system collects model estimates from Open-Meteo [16], accepts authenticated station submissions through an administrator endpoint or an HTTPS device gateway, replays a labelled demonstration series when a live source is unavailable, and analyses uploaded historical files without mixing them into the live series. Around the detector sit the parts that make a flag actionable: an incident object, an assignment and resolution workflow, recorded evidence, a notification outbox and an audited configuration path.</p>
+
+  <p>The contributions of this paper are:</p>
+  <ol class="contrib">
+    <li>A four-layer architecture (ingestion, detection, incident review, presentation) in TypeScript, so one validation and provenance path serves live feeds, device submissions and CSV uploads without a separate Python service.</li>
+    <li>A hybrid score fusing a robust median/MAD baseline, an Isolation Forest over six features, and a coarse spatial-agreement term used only for network-level classification, with a deterministic seed that makes historical replays reproducible.</li>
+    <li>An incident model that groups repeated detections, records decision-time evidence, and supports assignment, review outcomes, an audit trail and a retried, escalation-aware outbox.</li>
+    <li>An evaluation protocol based on rolling temporal replay, a matched-threshold comparison and controlled perturbations that reports flag rates and decision changes, and refuses to report precision, recall or false-positive rates when labels are absent.</li>
+    <li>A reported negative result: an LSTM next-reading predictor and a window autoencoder were compared offline and not promoted, because their flag behaviour varied without labelled evidence of benefit.</li>
+  </ol>
+
+  <p>Section II relates the work; Sections III–VI describe architecture, integrity controls, detection and incident handling; Section VII evaluates; Section VIII discusses validity, security and lessons; Section IX concludes. Appendices A and B give the reproduction commands and the station submission payload.</p>
+
+  <h2>II. Related Work</h2>
+  <p class="noindent">Outlier detection has an extensive literature. Chandola <i>et al.</i> group techniques into statistical, proximity-based, linear and ensemble families and note that method choice is dominated by label availability and by the cost of false alarms [5]. Classical work defines an outlier as an observation that deviates enough to suggest a different generating mechanism [6] — a deliberately causal definition, and therefore hard to operationalise without context. Proximity methods such as local outlier factor estimate local density and thus adapt to regions of varying tightness [7]; they require a meaningful distance over features whose scales must be chosen, which is difficult when temperature, humidity and pressure have different natural variances.</p>
+
+  <p>Isolation Forest [8] instead isolates observations by recursive random partitioning and scores them by mean path length, which is short for easy-to-isolate points. It is linear in sample count, needs no distance computation and has few hyperparameters, which suits a small deployment that cannot host a Python stack. It is, however, sensitive to feature scaling and to training-sample composition, and its score is not comparable across profiles — two properties that matter when a detector refits every few hours and when the same threshold is applied to stations with very different weather.</p>
+
+  <p>Robust location and scale estimators offer an interpretable complement. The median absolute deviation (MAD), scaled by 1.4826 for consistency under normality, has a high breakdown point and is insensitive to the very outliers being sought [9]. Combining a per-field robust deviation with a multivariate isolation score is a pragmatic compromise: the first is explainable to an operator, the second catches joint configurations that no single field explains. Neural alternatives are widely reported: long short-term memory models flag large one-step prediction errors [10], autoencoders flag high reconstruction error [11]; both need a calibration set, both produce scores whose scale is dataset-specific, and neither says which physical quantity moved — the property an operator needs most.</p>
+
+  <p>Meteorological quality control is the closest domain literature. Operational products apply range checks, internal consistency (for example dew point against temperature), step and persistence tests, and spatial consistency against neighbouring stations, retaining flags rather than deleting data [3], [4]. SkyGuard adopts that philosophy but reduces the spatial term to a coarse network-level signal, because no dense neighbouring network is guaranteed to be online at any instant, and because a station registry may contain expected locations rather than reporting instruments.</p>
+
+  <p>Two further threads inform the design. Concept-drift work observes that the relationship between inputs and normal behaviour changes over time, so a model calibrated once will silently degrade unless it is monitored and updated [12]. Our rolling refit and per-source staleness reporting are a minimal response to that observation. Separately, distributed-system practice treats an incident as a first-class object with state, ownership and an audit trail rather than a transient notification; the incident model in Section VI borrows that structure, along with a durable outbox for delivery, which avoids losing or duplicating messages when a request fails mid-flight [13], [14].</p>
+
+  <p>Finally, work on the operational cost of machine-learning systems argues that data dependencies, configuration and monitoring dominate the lifetime cost of a model, and that provenance and reproducibility are not optional extras [15]. SkyGuard takes that position literally: every detection stores the model version and thresholds it used, and the pattern detector is seeded so a replay is bit-for-bit reproducible.</p>
+
+  <h2>III. System Architecture</h2>
+  <h3>A. Design Requirements</h3>
+  <p class="noindent">Four requirements drove the design. First, <i>no silent source mixing</i>: every reading must carry a source that survives into storage, the API and the interface. Second, <i>explainable rejection</i>: a discarded reading must produce a reason an operator can read, not only a non-zero counter. Third, <i>human-in-the-loop</i>: the system ranks and contextualises, and a person decides whether equipment needs attention. Fourth, <i>no uncalibrated numbers in the interface</i>: fields that suggest probability are either calibrated or absent. The last requirement is unusual for a student prototype but follows directly from the observation that a plausible-looking score is more dangerous than an honest gap.</p>
+
+  <h3>B. Deployment and Stack</h3>
+  <p class="noindent">SkyGuard is one repository containing a React 19 dashboard built with Vite 7, an Express 4 API in TypeScript 5.6 on Node.js 22, a shared type module, a standalone HTTPS device gateway, and a documentation and reports directory. Production builds bundle the API with esbuild and serve the dashboard from the same origin, so there is one process to deploy and no cross-origin session handling. A multi-stage Dockerfile builds with Node 24 and runs the bundled server; the image exposes port 3000 and a <span class="math"><i>/healthz</i></span> endpoint that reports process liveness only, not source or e-mail health.</p>
+
+  <p>Persistence is PostgreSQL when a connection string is configured and an append-only JSONL store otherwise. File mode exists so the project runs on a laptop without a database server, and the documentation states its limits: single process, no transactions, no cross-process locking. A hosted demonstration uses one replica, a managed PostgreSQL service, and a mounted volume at <span class="math">/data</span> for the account and device-credential files, which are not stored in PostgreSQL and therefore need their own backup.</p>
+
+  <p>Collection runs on a non-overlapping scheduler that polls Open-Meteo [16] in batches of twenty locations for current conditions plus seven days of hourly context. The next timer is armed only after the previous run settles, and the timer is unreferenced so it cannot hold the process open. The default interval is fifteen minutes and is configurable between one minute and one day. Status (last attempt, last completion, last fresh sync, next attempt, and an error message for the last attempt) is held in memory and resets on restart — an accepted prototype limitation rather than persisted operational state.</p>
+
+  <h3>C. Ingestion Paths</h3>
+  <p class="noindent">Five paths write observations, and each keeps a trust label that survives into storage, API and interface (Table I). Live collection and CSV uploads share a validation function but differ on missing coordinates and future timestamps. Device submissions pass through an HTTPS gateway requiring TLS 1.2 or later [18], exposing exactly one route, forwarding only the bearer credential and body, rejecting non-JSON content and bodies above 2 MB, and applying a per-address limit of 120 requests per minute. Station-scoped credentials are stored hashed, shown once, and revocable; a batch that contains a station outside the credential's scope is rejected before storage.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE I</span><br />Observation Sources and Their Treatment</div>
+    <table>
+      <thead><tr><th>Source</th><th>Origin</th><th class="c">Scored</th><th>Label shown</th></tr></thead>
+      <tbody>
+        <tr><td>open-meteo</td><td>Modelled grid estimate</td><td class="c">Yes</td><td>Model estimate</td></tr>
+        <tr><td>station-api</td><td>Submitted device reading</td><td class="c">Yes</td><td>Station reading</td></tr>
+        <tr><td>uploaded</td><td>Analyst CSV import</td><td class="c">Offline</td><td>Uploaded dataset</td></tr>
+        <tr><td>replay</td><td>Demonstration series</td><td class="c">Yes</td><td>Replay</td></tr>
+        <tr><td>legacy-unknown</td><td>Provenance not recorded</td><td class="c">Historical</td><td>Unverified</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>D. Persistence Model</h3>
+  <p class="noindent">The schema separates what was received from what was accepted (Table II). Keeping the raw event table is the single most useful decision in the system: when an operator asks why a reading was rejected, the platform can show the payload it received, the field that failed and the limit that was applied. Detection results and incident actions are append-only in practice, which lets the system answer “what did the analyst see at the time?” without reconstructing it from mutable state. A migration path imports legacy JSONL files idempotently, creating a uniquely named backup of each source file before reading it.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE II</span><br />Storage Schema in Brief</div>
+    <table>
+      <thead><tr><th>Table</th><th>Purpose</th><th>Key constraint</th></tr></thead>
+      <tbody>
+        <tr><td>observation_events</td><td>Raw payload, quality status, issues</td><td>Append-only journal</td></tr>
+        <tr><td>observations</td><td>Accepted readings</td><td>Unique (source, station, time)</td></tr>
+        <tr><td>anomaly_results</td><td>Score, status, evidence per version</td><td>Unique (observation, model)</td></tr>
+        <tr><td>alerts</td><td>Detection snapshots for history</td><td>One per observation</td></tr>
+        <tr><td>station_incidents</td><td>Grouped review object</td><td>One active per (source, station)</td></tr>
+        <tr><td>incident_actions</td><td>Detection and user history</td><td>Append-only</td></tr>
+        <tr><td>notification_outbox</td><td>Queued e-mail with retries</td><td>One per (incident, kind)</td></tr>
+        <tr><td>detector_settings</td><td>Active thresholds</td><td>Single row, audited writes</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>E. Asynchronous Processing</h3>
+  <p class="noindent">Submissions are queued rather than scored inline. Each new station observation is inserted with a pending detection state, a partial index over pending rows keeps the scan cheap, and a worker drains the queue in observation order. Scoring a reading requires at least 24 earlier readings within seven days; up to 96 earlier readings form the baseline. Insufficient readings are recorded as such and are not rescored later using future observations, which would leak information into a historical replay. The worker runs at startup and on a short retry interval, processes a bounded batch per run, and exposes a status endpoint with pending counts and the last error, so a stalled queue is visible rather than silent.</p>
+
+  <p>In PostgreSQL, the score, the alert snapshot, the incident update and the queue completion commit together, so a crash cannot record a detection without acknowledging the queue item. The transitional file store offers no equivalent guarantee, and the documentation says so instead of implying parity. Only one backend process may drain the queue for a given database; the scheduler and session store assume the same.</p>
+
+  <h3>F. API Surface</h3>
+  <p class="noindent">The HTTP interface is grouped by concern and role (Table III). Only the device route is reachable through the gateway; the account, configuration and credential-management routes remain available only on the host machine. Responses are JSON, errors are deliberately terse (a failed login does not reveal whether the username exists), and every mutating administrator call writes an audit event with the acting account identifier.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE III</span><br />Representative API Groups</div>
+    <table>
+      <thead><tr><th>Group</th><th>Representative routes</th><th>Access</th></tr></thead>
+      <tbody>
+        <tr><td>Session</td><td>auth/status, setup, login, me, logout</td><td>Public / signed-in</td></tr>
+        <tr><td>Accounts</td><td>users, users/:id</td><td>Administrator</td></tr>
+        <tr><td>Live data</td><td>realtime, history, config, health</td><td>Mixed</td></tr>
+        <tr><td>Station feed</td><td>station-observations, monitor, device-credentials</td><td>Administrator</td></tr>
+        <tr><td>Incidents</td><td>station-incidents, actions, acknowledge, assign, resolve</td><td>Operator / admin</td></tr>
+        <tr><td>History</td><td>analytics/alerts, alert-history, evaluation/chennai</td><td>Signed-in</td></tr>
+        <tr><td>Quality</td><td>quality-events, ingestion/status, scoring/status</td><td>Signed-in</td></tr>
+        <tr><td>Notify</td><td>notification-policy, notification-status</td><td>Administrator</td></tr>
+        <tr><td>Device</td><td>device/observations</td><td>Station credential</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>G. Presentation, Roles and Access Control</h3>
+  <p class="noindent">The dashboard provides an overview map, a station feed, an alerts view, analytics for historical investigation, a sensor-health view and settings. Two roles exist: administrators manage accounts, device credentials and thresholds; operators monitor stations, review and assign incidents, and analyse datasets. Passwords are stored as scrypt hashes with a per-user salt and compared in constant time, failed logins are counted per account with a short window, and sessions are held in memory for eight hours, so a restart invalidates them. The first account is created with a one-time code printed to the server log; the code changes if the process restarts before setup completes. These measures are appropriate for a local prototype and are documented as insufficient for public deployment without an identity provider and persistent session storage.</p>
+
+  <figure>
+    <div class="fig">
+      <div class="tiers">
+        <div class="row r3">
+          <div class="box">Open-Meteo API<br /><span class="small">model estimates</span></div>
+          <div class="box">Station / gateway<br /><span class="small">HTTPS, device token</span></div>
+          <div class="box">CSV upload<br /><span class="small">analyst import</span></div>
+        </div>
+        <div class="arrow">▼ &nbsp;validate &nbsp;·&nbsp; source-tag &nbsp;·&nbsp; deduplicate&nbsp; ▼</div>
+        <div class="box"><b>Ingestion</b> — raw event journal + accepted observations</div>
+        <div class="arrow">▼</div>
+        <div class="box"><b>Detector</b> — median/MAD profile · Isolation Forest · spatial agreement</div>
+        <div class="arrow">▼</div>
+        <div class="row r2">
+          <div class="box"><b>Incident engine</b><br />grouping, evidence, assignment, outbox</div>
+          <div class="box"><b>REST API</b><br />Express, role-checked</div>
+        </div>
+        <div class="arrow">▼</div>
+        <div class="box"><b>Dashboard</b> — overview map · station feed · analytics · data quality</div>
+      </div>
+    </div>
+    <figcaption>Fig. 1. Layered data flow. Every path is source-tagged at ingestion, so provenance survives detection, storage and display.</figcaption>
+  </figure>
+
+  <h2>IV. Data Integrity and Provenance</h2>
+  <h3>A. Validation Pipeline</h3>
+  <p class="noindent">Validation is shared by every ingestion path and returns both a parsed observation and an issue list, so a rejection is explainable rather than opaque. A reading must carry a station identifier, a parseable timestamp and numeric temperature, humidity and pressure. Screening ranges default to <span class="math">−90…65 °C</span>, <span class="math">0…100%</span> and <span class="math">300…1100 hPa</span> and are configurable, because they are plausibility bounds rather than equipment limits. Explicit units are accepted only if they are the expected ones; unknown units are rejected rather than silently converted, because an implicit conversion is indistinguishable from a calibration error once stored. Timestamps without an offset are read as <span class="math">+05:30</span>, matching the target network, and readings more than five minutes in the future are rejected. A CSV row without coordinates is accepted with a warning and a zero placeholder that the interface never renders as a position.</p>
+
+  <p>Each condition maps to a named issue code (Table IV) with a fixed disposition. The distinction between rejecting and accepting-with-warning is deliberate: an unknown station identifier in an uploaded file is a provenance gap, not a numeric impossibility, so it is recorded and surfaced rather than discarded. Duplicates are rejected after validation, and the raw event is still journalled so the operator can see what arrived twice.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE IV</span><br />Validation Issue Codes and Dispositions</div>
+    <table>
+      <thead><tr><th>Code</th><th>Condition</th><th>Disposition</th></tr></thead>
+      <tbody>
+        <tr><td>missing_station</td><td>No station identifier</td><td>Reject</td></tr>
+        <tr><td>invalid_timestamp</td><td>Unparseable or impossible date</td><td>Reject</td></tr>
+        <tr><td>future_timestamp</td><td>More than five minutes ahead</td><td>Reject</td></tr>
+        <tr><td>missing_or_invalid</td><td>Non-numeric field</td><td>Reject</td></tr>
+        <tr><td>out_of_range</td><td>Outside screening limits</td><td>Reject</td></tr>
+        <tr><td>unsupported_unit</td><td>Unit is not °C, % or hPa</td><td>Reject</td></tr>
+        <tr><td>invalid_coordinates</td><td>Missing or outside valid ranges</td><td>Reject</td></tr>
+        <tr><td>unknown_station</td><td>ID not in the registry</td><td>Accept, warn</td></tr>
+        <tr><td>missing_coordinates</td><td>CSV row without coordinates</td><td>Accept, warn</td></tr>
+        <tr><td>duplicate</td><td>Same source, station and time</td><td>Reject, count</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>B. Identity, Duplication and Staleness</h3>
+  <p class="noindent">A duplicate is defined by <span class="math">(source, station, observation time)</span> and rejected at the storage layer, so re-delivery from a flaky gateway is harmless and idempotent. Duplicates never replace prior readings, which means a corrected value must arrive with a later timestamp; the documentation states this rather than leaving it to be discovered. Staleness is evaluated per source: data older than thirty minutes is marked stale, and cached values reused after a failed fetch are labelled as cached rather than current. When a source fails and no cache exists, the background job reports failure instead of fabricating replay observations — a small decision with a large effect on trust.</p>
+
+  <p>Station arrival monitoring adds four states — awaiting readings, receiving, stale and disconnected — derived from the gap since the last receipt relative to the expected reporting interval, with cut-offs at twice and three times that interval. The monitor opens a separate station-health warning when a feed goes stale or never arrives, and repeated checks during the same outage do not create repeated alerts. A recovered feed does not auto-resolve the incident, because resumption of data is evidence about delivery, not about the cause. The interface states that arrival implies delivery, not a verified physical device.</p>
+
+  <h3>C. Source Isolation and Labelling</h3>
+  <p class="noindent">Charts, history queries and exports filter by source, and uploads never enter the live series. This prevents the most common interpretive error in prototype monitoring, where a demonstration or import is later mistaken for instrument data. The interface carries the label at the point of display: a badge distinguishes a model estimate from a station reading, a replay, or a cached value, and the recommendation text differs per source. Pressures are not mixed either: the optional national reference feed provides mean sea-level pressure whereas submissions carry station pressure, and a submission declaring a non-station pressure type is refused.</p>
+
+  <h2>V. Detection Methodology</h2>
+  <p class="noindent">Detection is deliberately hybrid. A per-field robust deviation is easy to explain; an isolation score captures joint configurations; a spatial term separates a network-wide weather event from a local irregularity. Each component is bounded and the fused score maps to three states. No learned parameter requires labelled faults, which is what allows the system to run in an unlabelled deployment at all. Every constant below is exposed in configuration, because an operational threshold is a policy choice that should be reviewable rather than buried in code.</p>
+
+  <h3>A. Feature Representation</h3>
+  <p class="noindent">For a station's chronological history, each reading becomes a six-dimensional vector of levels and one-step increments:</p>
+  <div class="eq"><div class="body math"><b>x</b><sub>t</sub> = [ T<sub>t</sub>, H<sub>t</sub>, P<sub>t</sub>, ΔT<sub>t</sub>, ΔH<sub>t</sub>, ΔP<sub>t</sub> ]</div><div class="num">(1)</div></div>
+  <p class="noindent">with <span class="math">ΔT<sub>t</sub> = T<sub>t</sub> − T<sub>t−1</sub></span> and similarly for the other fields. Including increments makes the detector sensitive to step changes without treating a station's absolute climate as anomalous; a Leh station at −5 °C is normal, a jump of 8 °C in one reading is not. A profile is built from 24 to 96 prior readings and refitted every 24 readings, so the baseline follows seasonal drift at bounded cost. Increments require a previous reading, so the first observation of a profile contributes zero differences and cannot be flagged on change alone.</p>
+
+  <h3>B. Robust Baseline</h3>
+  <p class="noindent">For each physical field the profile stores a median and a scaled MAD:</p>
+  <div class="eq"><div class="body math">c<sub>j</sub> = med(x<sub>1j</sub>, …, x<sub>nj</sub>)</div><div class="num">(2)</div></div>
+  <div class="eq"><div class="body math">σ<sub>j</sub> = max( 1.4826 · med( |x<sub>ij</sub> − c<sub>j</sub>| ), ε )</div><div class="num">(3)</div></div>
+  <p class="noindent">The constant makes <span class="math">σ<sub>j</sub></span> consistent with the standard deviation under normality [9], and the floor <span class="math">ε</span> prevents division by zero when a sensor reports an exactly constant value — a real case, since a frozen sensor produces exactly this input. The per-reading deviation is <span class="math">z<sub>j</sub> = (x<sub>j</sub> − c<sub>j</sub>)/σ<sub>j</sub></span>; a field is reported as affected when <span class="math">|z<sub>j</sub>| ≥ 2</span>, giving the operator a named quantity and a direction. The threshold of two is a reporting convention, not a calibrated boundary, and the interface names the field rather than implying a probability.</p>
+
+  <h3>C. Isolation Forest</h3>
+  <p class="noindent">The forest is implemented in-repository with no external dependency. Each of 64 trees grows on a random subsample of 128 standardized vectors, splits at a random value between the minimum and maximum of a random feature, and is limited to depth <span class="math">⌈log<sub>2</sub>ψ⌉</span> for subsample size <span class="math">ψ</span> [8]. Path lengths are averaged and normalized by the expected path length of an unsuccessful search in a binary search tree:</p>
+  <div class="eq"><div class="body math">c(n) = 2H(n−1) − 2(n−1)/n, &nbsp; H(i) ≈ ln i + γ</div><div class="num">(4)</div></div>
+  <div class="eq"><div class="body math">s(<b>x</b>) = 2<sup>−E[h(<b>x</b>)]/c(ψ)</sup></div><div class="num">(5)</div></div>
+  <p class="noindent">Randomness comes from a seeded 32-bit linear congruential generator, so replaying the same observations reproduces the same scores. Without this, a historical evaluation would report a slightly different flag count on every run and an operator could not verify a saved report. Because raw isolation scores depend on sample shape and size, the score is rescaled before fusion:</p>
+  <div class="eq"><div class="body math">s′ = clamp( (s − 0.35) / 0.5, 0, 1 )</div><div class="num">(6)</div></div>
+
+  <h3>D. Fusion and Decision</h3>
+  <p class="noindent">The robust signal normalizes deviations with field-specific denominators reflecting their typical range:</p>
+  <div class="eq"><div class="body math">z = clamp( ( |z<sub>T</sub>|/4 + |z<sub>H</sub>|/4 + |z<sub>P</sub>|/3 ) / 3, 0, 1 )</div><div class="num">(7)</div></div>
+  <div class="eq"><div class="body math">a = 0.7·s′ + 0.3·z &nbsp;&nbsp;(profile available)</div><div class="num">(8)</div></div>
+  <p class="noindent">When a station lacks sufficient history the score falls back to <span class="math">z</span> alone rather than to a forest trained on an unrepresentative sample. Scores are rounded to two decimals, clamped to <span class="math">[0.01, 0.99]</span>, and mapped to Healthy, Warning or Critical by two configurable thresholds (0.32 and 0.62 by default). A derived health index preserves continuity with earlier dashboards:</p>
+  <div class="eq"><div class="body math">health = clamp( round(100 − 65a), 20, 100 )</div><div class="num">(9)</div></div>
+  <p class="noindent">Neither <span class="math">a</span> nor the health index is described as a probability or a measurement of equipment condition. The API returns <span class="math">confidence: null</span> for exactly this reason: a field so named would be read as calibrated whether or not it is, and a legacy uncalibrated value would be trusted by every consumer that did not read the release note.</p>
+
+  <h3>E. Worked Example</h3>
+  <p class="noindent">Table V traces the arithmetic for three synthetic readings against a fixed profile, to make the interaction of the two signals explicit. The first case moves temperature only and lands just above the warning threshold; the isolation score contributes most of it. The second adds humidity, raising the robust term. The third adds a pressure deviation of 7.5 robust units, saturates <span class="math">z</span> and crosses into Critical. The values are illustrative arithmetic, not measurements from the deployed system.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE V</span><br />Illustrative Score Arithmetic (<i>c</i> = 25.0 °C, 60 %, 1005 hPa)</div>
+    <table>
+      <thead><tr><th>Case</th><th class="n">z<sub>T</sub></th><th class="n">z<sub>H</sub></th><th class="n">z<sub>P</sub></th><th class="n">z</th><th class="n">s</th><th class="n">a</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td class="n">4.0</td><td class="n">0.0</td><td class="n">0.0</td><td class="n">0.33</td><td class="n">0.55</td><td class="n">0.38</td><td>Warning</td></tr>
+        <tr><td>2</td><td class="n">4.0</td><td class="n">3.0</td><td class="n">0.0</td><td class="n">0.58</td><td class="n">0.58</td><td class="n">0.49</td><td>Warning</td></tr>
+        <tr><td>3</td><td class="n">4.0</td><td class="n">3.0</td><td class="n">−7.5</td><td class="n">1.00</td><td class="n">0.60</td><td class="n">0.72</td><td>Critical</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>F. Network-Level Spatial Agreement</h3>
+  <p class="noindent">A single station above threshold is ambiguous; a dozen together usually reflects weather. The detector counts flagged stations and the fraction whose neighbours are also flagged. A <i>regional weather</i> classification requires at least <span class="math">max(2, ⌈0.5N⌉)</span> flagged stations and spatial agreement of at least 40%. Critical flags without that agreement are labelled <i>localized anomaly</i>, a deliberately non-causal term that replaced an earlier “sensor fault” label; warnings without agreement are reported as mixed. Accompanying evidence states what was counted, never what caused it. The term is coarse by design: without a dense neighbour set and a distance model, a formal spatial consistency test would imply a rigour the data cannot support.</p>
+
+  <h3>G. Sustained Change and Frozen Signals</h3>
+  <p class="noindent">Point detectors miss slow drift, so a separate rule subtracts, for each reading in the latest 24-hour window, the median of same-UTC-hour values from the preceding 14 days, then compares the median residual of the two halves of the window. A review is raised when the halves differ by at least <span class="math">1 °C</span>, <span class="math">5</span> percentage points or <span class="math">2 hPa</span> and at least 70% of cross-half residual pairs agree in direction. The rule requires seven earlier days per hour, six recent readings spanning 18 hours, no gap longer than six hours and three readings per half. Same-UTC-hour matching assumes stable reporting times, so a station that changes schedule can produce spurious residuals; the evaluation reports an insufficient-history outcome instead of guessing.</p>
+
+  <p>A cheaper rule detects a frozen sensor: eight or more readings within two hours spanning at least one hour, gaps at most 30 minutes, and a range no greater than 0.05 °C, 0.1 percentage points or 0.1 hPa. Measurement-process guidance likewise cautions that drift is difficult to separate from ordinary variation [17], which is why frozen signals apply to fresh submissions at most once per station-hour and can open a Warning incident, while drift stays a review signal in analytics and is not used for live alerting. Both rules are heuristics with published limits, and both can fire on a genuinely stable atmosphere — a calm night with a flat temperature trace is not a fault.</p>
+
+  <h3>H. Computational Characteristics</h3>
+  <p class="noindent">A profile refit builds 64 trees over at most 128 samples of six features, which is <span class="math">O(ψ log ψ)</span> per tree and independent of the full history length. With a 96-reading window and a refit every 24 readings, a hundred stations performing hourly reporting would refit a few thousand times per day; the cost is dominated by JSON and database round-trips rather than by the model. Scoring a single observation is trivial. This was a deliberate design goal: the detector must be able to run inside the same Express process as the API, on a laptop, with no GPU and no Python runtime, or the project would not have been deployable in its own demonstration environment.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE VI</span><br />Default Detector Configuration</div>
+    <table>
+      <thead><tr><th>Parameter</th><th class="n">Value</th><th>Parameter</th><th class="n">Value</th></tr></thead>
+      <tbody>
+        <tr><td>Warning threshold</td><td class="n">0.32</td><td>Forest trees</td><td class="n">64</td></tr>
+        <tr><td>Critical threshold</td><td class="n">0.62</td><td>Subsample size</td><td class="n">128</td></tr>
+        <tr><td>Baseline window</td><td class="n">96</td><td>Fusion weights</td><td class="n">0.7 / 0.3</td></tr>
+        <tr><td>Minimum history</td><td class="n">24</td><td>Affected-field cut-off</td><td class="n">|z| ≥ 2</td></tr>
+        <tr><td>Refit interval</td><td class="n">24</td><td>Regional fraction</td><td class="n">0.5</td></tr>
+        <tr><td>Ingestion interval</td><td class="n">15 min</td><td>Stale age</td><td class="n">30 min</td></tr>
+        <tr><td>Drift thresholds</td><td class="n">1 °C / 5 pp / 2 hPa</td><td>Agreement required</td><td class="n">70%</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h2>VI. Incident Lifecycle and Explainability</h2>
+  <p class="noindent">A score alone is not an operational object. Repeated flags for one station are grouped into a single incident, and a unique partial index over source, station and active status guarantees at most one active incident at a time. Repeated detections update it rather than creating a new one, including while it is under investigation, so the operator sees one thread of work instead of a stream of duplicates.</p>
+
+  <h3>A. States and Transitions</h3>
+  <p class="noindent">The lifecycle is small on purpose (Table VII). Either role may assign or clear an incident; starting an investigation without an assignee claims it for the acting user, while an existing assignment is preserved. Resolved incidents are immutable and cannot be reassigned, and a later flagged observation opens a new incident rather than reopening the old one. Resolution records an outcome of undetermined, sensor fault, weather event or false alarm, the last three requiring a written note, and the incident history lists both machine detections and human actions in one ordered log.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE VII</span><br />Incident States and Permitted Transitions</div>
+    <table>
+      <thead><tr><th>State</th><th>Meaning</th><th>Next states</th></tr></thead>
+      <tbody>
+        <tr><td>open</td><td>Detection recorded, not seen</td><td>acknowledged, resolved</td></tr>
+        <tr><td>acknowledged</td><td>Operator is aware</td><td>investigating, resolved</td></tr>
+        <tr><td>investigating</td><td>Assigned and under review</td><td>acknowledged, resolved</td></tr>
+        <tr><td>resolved</td><td>Outcome recorded; immutable</td><td>Terminal</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>B. Recorded Evidence</h3>
+  <p class="noindent">Every detection snapshot stores observed values, the score, the model version, the thresholds in force, the number of baseline samples, the robust baseline centres and the immediately preceding observation. The details panel recomputes per-hour changes from recorded timestamps and displays “not recorded” where an older snapshot lacks a field, which happens for records created before evidence capture was introduced. A threshold shown beside a flag is evidence of what the detector did, whereas surrounding weather is context; the interface never synthesises a nearby comparison it does not have. Recommended-action text is conditioned on the source, so a model estimate, a submitted reading, a replay and an upload each receive different advice.</p>
+
+  <p>Recording evidence has a cost in storage and schema churn, and older rows inevitably carry nulls. We chose to accept that rather than to backfill, because a backfilled value would look like contemporaneous evidence while being derived from a later model. The distinction matters when an incident is reviewed weeks later, which is exactly when the details are contested.</p>
+
+  <h3>C. Notification Outbox</h3>
+  <p class="noindent">Notification is a durable outbox rather than a side effect in the request path, so a mail failure cannot roll back a detection and a crash cannot lose a queued message (Table VIII). One initial message may be queued per incident; acknowledgement, investigation or resolution cancels a pending escalation, and resolution cancels a pending initial message. Jobs are locked while sending and retried on schedule, and the queue is processed about once a minute. Delivery is at-least-once: a crash after the mail server accepts a message can duplicate it, and SMTP acceptance does not prove inbox delivery. Both statements are documented for operators rather than discovered during an incident review.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE VIII</span><br />Notification Policy Parameters</div>
+    <table>
+      <thead><tr><th>Parameter</th><th>Default</th><th>Effect</th></tr></thead>
+      <tbody>
+        <tr><td>Recipient</td><td>Configured address</td><td>Initial message target</td></tr>
+        <tr><td>Minimum severity</td><td>Warning</td><td>Suppresses lower-severity incidents</td></tr>
+        <tr><td>Max attempts</td><td>3</td><td>Retries before permanent failure</td></tr>
+        <tr><td>Retry delay</td><td>2 min</td><td>Wait between attempts</td></tr>
+        <tr><td>Escalation</td><td>Off</td><td>Optional second address</td></tr>
+        <tr><td>Escalation delay</td><td>Off</td><td>Sent only if still unacknowledged</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>D. Analyst Interfaces</h3>
+  <p class="noindent">Analytics pages readings, detection snapshots and grouped incidents independently, filters by UTC date range, source, measurement and status, and exports the current page to CSV with formula-injection escaping. Because offset pagination over changing data can move records between pages, the interface asks the analyst to reapply filters before exporting, and it states that a CSV contains the rows on the current page rather than every matching row. Incident panels show the most recent 100 actions with notes. The map colours stations by source status and marks stale or unreachable sources as “unavailable or stale” — a statement about the displayed data, not about hardware health.</p>
+
+  <h2>VII. Evaluation</h2>
+  <p class="noindent">Our question is not “how accurate is the detector?” but “what does it do on unlabelled data, and how does it respond to controlled change?” We therefore report flag rates, agreement counts and decision changes, and state when a metric is undefined. All replays use the real detector in an isolated temporary backend with background collection and e-mail disabled; no synthetic observation is written to the database and no message is sent.</p>
+
+  <h3>A. Protocol</h3>
+  <p class="noindent">Historical NOAA GHCNh station files are replayed through the detector [3]. Each observation is scored using only earlier observations, with a 24-reading warm-up, a rolling window of up to 96 readings and refitting every 24. Reports record dataset hashes and thresholds, so a result can be tied to an exact input file. Four stations contribute nine station-months: Chennai International, Dubai International, Singapore Changi and London Heathrow, each in January and July 2024, plus a second Chennai month. Humidity in these samples is derived by the source agency from temperature and dew point, so it is not an independent humidity measurement; temperature and station pressure carry the agency's good quality code. No sample carries verified sensor-fault labels.</p>
+
+  <h3>B. Single-Station Replay</h3>
+  <p class="noindent">For Chennai International Airport, January 2024, 248 complete observations were available; 24 formed the warm-up and 224 were scored (Table IX). Sixty-nine were flagged as warnings and none as critical, a flag rate of 30.8%. That is a flag rate: without labels it cannot be converted into an error rate, and it is not evidence that 31% of readings were wrong. The absence of critical flags is also not a success — the fused score rarely reaches 0.62 on a single field, and a detector that never escalates provides no prioritisation.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE IX</span><br />Rolling Replay, Chennai, January 2024</div>
+    <table>
+      <thead><tr><th>Quantity</th><th class="n">Value</th><th>Quantity</th><th class="n">Value</th></tr></thead>
+      <tbody>
+        <tr><td>Observations</td><td class="n">248</td><td>Warning flags</td><td class="n">69</td></tr>
+        <tr><td>Scored</td><td class="n">224</td><td>Critical flags</td><td class="n">0</td></tr>
+        <tr><td>Warm-up</td><td class="n">24</td><td>Flag rate</td><td class="n">30.8%</td></tr>
+        <tr><td>Baseline window</td><td class="n">96</td><td>Labelled cases</td><td class="n">0</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>C. Diurnal Diagnostic</h3>
+  <p class="noindent">Grouping the same run by UTC observation hour is more informative than the aggregate (Table X). Readings at 06:00 and 09:00 UTC were flagged in 86% and 82% of cases; readings at 18:00 and 21:00 UTC were never flagged. The sample is almost exactly three-hourly. Two explanations are consistent with the data: the diurnal cycle moves temperature and humidity faster than a pooled baseline expects, and the derivation of humidity from temperature and dew point compounds the effect at particular hours. Neither explanation can be verified without labels, so we treat the concentration as a hypothesis for time-of-day baselining rather than as a defect to tune away on the same sample.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE X</span><br />Flags by UTC Hour (Chennai, January 2024)</div>
+    <table>
+      <thead><tr><th>Hour (UTC)</th><th class="n">Scored</th><th class="n">Flagged</th><th class="n">Rate</th></tr></thead>
+      <tbody>
+        <tr><td>00:00</td><td class="n">28</td><td class="n">2</td><td class="n">7.1%</td></tr>
+        <tr><td>03:00</td><td class="n">28</td><td class="n">7</td><td class="n">25.0%</td></tr>
+        <tr><td>06:00</td><td class="n">28</td><td class="n">24</td><td class="n">85.7%</td></tr>
+        <tr><td>09:00</td><td class="n">28</td><td class="n">23</td><td class="n">82.1%</td></tr>
+        <tr><td>12:00</td><td class="n">28</td><td class="n">6</td><td class="n">21.4%</td></tr>
+        <tr><td>15:00</td><td class="n">28</td><td class="n">7</td><td class="n">25.0%</td></tr>
+        <tr><td>18:00</td><td class="n">28</td><td class="n">0</td><td class="n">0.0%</td></tr>
+        <tr><td>21:00</td><td class="n">28</td><td class="n">0</td><td class="n">0.0%</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>D. Cross-Station Replay</h3>
+  <p class="noindent">The unchanged detector was then run on eight station-months from four airports (Table XI). Flag rates ranged from 27.1% (Dubai, July) to 54.3% (London Heathrow, January). Two points follow. The operating point is not portable in the sense a fixed false-alarm budget would require: Heathrow winter data trips the warning threshold on more than half of all readings, which for an operator means the chart carries little information. And because the samples are unlabelled, the differences cannot be scored as improvements or degradations. Per-station or per-season calibration is the natural remedy, and judging it requires labels.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE XI</span><br />Unmodified Replay Across Station-Months</div>
+    <table>
+      <thead><tr><th>Station (2024)</th><th class="n">Scored</th><th class="n">Flagged</th><th class="n">Rate</th></tr></thead>
+      <tbody>
+        <tr><td>Chennai, Feb</td><td class="n">174</td><td class="n">56</td><td class="n">32.2%</td></tr>
+        <tr><td>Chennai, Jul</td><td class="n">182</td><td class="n">54</td><td class="n">29.7%</td></tr>
+        <tr><td>Singapore, Jan</td><td class="n">576</td><td class="n">183</td><td class="n">31.8%</td></tr>
+        <tr><td>Singapore, Jul</td><td class="n">563</td><td class="n">167</td><td class="n">29.7%</td></tr>
+        <tr><td>Dubai, Jan</td><td class="n">192</td><td class="n">67</td><td class="n">34.9%</td></tr>
+        <tr><td>Dubai, Jul</td><td class="n">181</td><td class="n">49</td><td class="n">27.1%</td></tr>
+        <tr><td>London, Jan</td><td class="n">573</td><td class="n">311</td><td class="n">54.3%</td></tr>
+        <tr><td>London, Jul</td><td class="n">525</td><td class="n">236</td><td class="n">45.0%</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>E. Matched-Threshold Comparison</h3>
+  <p class="noindent">To test whether the hybrid score is doing work that a simpler time-of-day rule would do, we built an experimental candidate that subtracts the median of the same UTC hour over the preceding days and reports the largest robust residual. Its threshold was fitted once on the January Chennai development sample so that both methods flagged the same number of observations: 64 of 192. That equality is the most interesting result in the paper. The two methods agreed on only 26 observations; each flagged 38 that the other did not, and both left 90 unflagged. Matching an aggregate rate therefore says nothing about agreement, and on unlabelled data neither method can be declared the better one.</p>
+
+  <p>The fixed candidate threshold was then applied unchanged to the other eight station-months (Table XII). It flagged more than the operational detector in Dubai, and fewer in Singapore and London. Since the samples carry no fault labels, those differences cannot be classified as improvements or regressions; what they show is that the choice of baseline — pooled versus same-hour — changes which readings an operator would be asked to review, and that the choice deserves a labelled test rather than a preference.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE XII</span><br />Operational Detector vs. Experimental Same-Hour Baseline</div>
+    <table>
+      <thead><tr><th>Station-month</th><th class="n">Matched</th><th class="n">Current</th><th class="n">Candidate</th></tr></thead>
+      <tbody>
+        <tr><td>Chennai, Feb</td><td class="n">174</td><td class="n">56</td><td class="n">48</td></tr>
+        <tr><td>Chennai, Jul</td><td class="n">182</td><td class="n">54</td><td class="n">62</td></tr>
+        <tr><td>Singapore, Jan</td><td class="n">576</td><td class="n">183</td><td class="n">160</td></tr>
+        <tr><td>Singapore, Jul</td><td class="n">563</td><td class="n">167</td><td class="n">118</td></tr>
+        <tr><td>Dubai, Jan</td><td class="n">192</td><td class="n">67</td><td class="n">81</td></tr>
+        <tr><td>Dubai, Jul</td><td class="n">181</td><td class="n">49</td><td class="n">74</td></tr>
+        <tr><td>London, Jan</td><td class="n">573</td><td class="n">311</td><td class="n">192</td></tr>
+        <tr><td>London, Jul</td><td class="n">525</td><td class="n">236</td><td class="n">209</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>F. Controlled Perturbations</h3>
+  <p class="noindent">To probe the decision boundary, single readings were altered by small amounts and each case was replayed against its own unmodified control. A <i>new flag</i> counts only where the control at that timestamp was not already flagged, so the denominator is honest about pre-existing flags. At the Chennai February endpoint, changes of ±1 °C, ±5 percentage points and ±2 hPa produced at most one new flag in four eligible cases, from the pressure decrease. Across thirty-six single-reading cases at three stations in July, pressure changes were the most reliably reflected and ±1 °C changes were never detected: a one-degree step is within ordinary minute-to-minute variability at these sites, so the result is expected rather than a defect, and it sets the scale at which the detector is useful.</p>
+
+  <p>Larger sustained changes behave differently. Table XIII applies linear 24-hour ramps to 27 windows across nine station-months. A ±4 °C ramp raised a new review flag in 18 of 19 eligible windows, and a ±6 hPa ramp in 18 of 21 and 21 of 21; upward humidity ramps were often ineligible because simulated values exceeded 100%, and values were not clipped. Ramps also <i>removed</i> existing control flags in several cases — four for a −4 °C ramp and five for a +6 hPa ramp — showing that the outcome depends on the original trend and the direction of the imposed change, not only its magnitude. The rule is best understood as a trend comparator, not a detector with fixed sensitivity, and a report that quoted only the new-flag counts would overstate its reliability.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE XIII</span><br />Synthetic 24-Hour Ramps, Nine Station-Months</div>
+    <table>
+      <thead><tr><th>Change over 24 h</th><th class="n">New flag / eligible</th><th class="n">Skipped</th></tr></thead>
+      <tbody>
+        <tr><td>Temperature −4 °C</td><td class="n">18 / 19</td><td class="n">0</td></tr>
+        <tr><td>Temperature +4 °C</td><td class="n">18 / 19</td><td class="n">0</td></tr>
+        <tr><td>Humidity −15 pp</td><td class="n">15 / 16</td><td class="n">0</td></tr>
+        <tr><td>Humidity +15 pp</td><td class="n">9 / 11</td><td class="n">10</td></tr>
+        <tr><td>Pressure −6 hPa</td><td class="n">18 / 21</td><td class="n">0</td></tr>
+        <tr><td>Pressure +6 hPa</td><td class="n">21 / 21</td><td class="n">0</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <h3>G. Neural Alternatives and the Promotion Decision</h3>
+  <p class="noindent">We implemented an LSTM next-reading predictor and a dense window autoencoder and compared them with the operational detector on the same observations, using a chronological 60/20/20 split within each station-month, per-method 95th-percentile thresholds calibrated on the validation segment, and a rolling Isolation Forest updated with earlier observations. Table XIV counts flags on unmodified test observations, not false alarms.</p>
+
+  <figure class="tbl">
+    <div class="tabcap"><span class="num">TABLE XIV</span><br />Flags on Unmodified Test Windows</div>
+    <table>
+      <thead><tr><th>Data (test <i>n</i>)</th><th class="n">Rule</th><th class="n">Baseline</th><th class="n">LSTM</th><th class="n">AE</th></tr></thead>
+      <tbody>
+        <tr><td>Chennai, Jan (50)</td><td class="n">0</td><td class="n">0</td><td class="n">7</td><td class="n">40</td></tr>
+        <tr><td>Chennai, Feb (46)</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">2</td></tr>
+        <tr><td>Dubai, Jan (50)</td><td class="n">0</td><td class="n">6</td><td class="n">5</td><td class="n">17</td></tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <p class="noindent">The autoencoder flagged 40 of 50 unmodified Chennai January windows, an implausible operating point for monitoring, and behaved entirely differently on the other two months. The LSTM was quieter but inconsistent, and neither offered per-field explanations an operator could check. With no verified labels, a higher or lower flag count cannot be read as better or worse; the only defensible conclusion is that the evidence does not support a change. We therefore retained the operational detector and recorded the conditions for reconsideration: independently documented, time-aligned fault and non-fault labels with station and sensor identity; predefined station and period holdouts; event-level missed faults, false alarms per station-hour, precision, recall and detection delay; and a shadow-mode trial with versioned thresholds and a rollback plan.</p>
+
+  <h3>H. Implementation Verification</h3>
+  <p class="noindent">The behaviour described here is covered by an automated suite of unit and integration tests. The recorded verification run on 13 November 2026 passed 72 tests across 25 files, type checking, and a production build; later additions extend the suite, including gateway TLS, incident policy and pagination cases. The tests use isolated temporary storage and synthetic observations, so they never read or write the demonstration database and never send mail. They assert, among other things, that a duplicate is rejected rather than overwritten, that an out-of-scope device batch is refused, that a revoked credential stops working, that a resolved incident cannot be reassigned, that pending escalation is cancelled by acknowledgement, and that CSV export escapes a formula-like value. These checks establish that the implementation behaves as specified; they say nothing about physical sensor faults, and we report them as engineering evidence only.</p>
+
+  <h2>VIII. Discussion</h2>
+  <h3>A. Threats to Validity</h3>
+  <p class="noindent">Internal validity: the station-months used here were explored during development and are not independent holdouts, so any comparison among methods shares that history. We reduce, but do not remove, the risk by fitting the candidate threshold once on a development sample and applying it unchanged elsewhere, and by recording input hashes with every report. External validity: four airports in four climates are not a representative sample of a national network, and the bundled hundred-station directory is a coverage plan rather than a set of reporting instruments. Construct validity: a flag is not a fault. Every metric in Section VII measures the behaviour of a decision rule, not the condition of a sensor, and the labels needed to bridge that gap do not exist in the data.</p>
+
+  <p>Conclusion validity is limited by sample size. Counts in the tens and hundreds support statements about flag rates, but not confidence intervals narrow enough to rank two methods whose totals differ by five observations. Reporting agreement counts, as in Section VII-E, is more honest than ranking them, because it exposes how much the methods actually disagree.</p>
+
+  <h3>B. Security and Operational Considerations</h3>
+  <p class="noindent">The prototype authenticates local accounts with salted scrypt hashes and constant-time comparison, limits repeated failed logins, keeps sessions in memory for eight hours, and audits administrative changes. Device credentials are random, station-scoped, expiring and revocable, and only a hash is stored. The gateway terminates TLS 1.2 or later, accepts a single path, caps body size, applies a per-address rate limit, and forwards neither cookies nor proxy headers, following the principle that an ingress should expose the minimum surface [14], [18]. These measures address the threat model of a demonstration, not that of an internet-facing service: there is no multi-factor authentication, no distributed rate limiting, no key rotation automation, and no intrusion detection.</p>
+
+  <p>Operationally, several properties matter more than they appear on a feature list. The scheduler cannot overlap runs, so a slow upstream call delays rather than piles up. Staleness is visible per source, so a stale chart is labelled rather than silently repeated. The setup code for the first administrator is printed to the log and rotates on restart, which is usable on a laptop and would need a controlled channel in a hosted environment. The account file lives outside PostgreSQL, so a database backup alone is incomplete — a subtlety that the backup documentation states explicitly because it is easy to get wrong.</p>
+
+  <h3>C. Design Implications</h3>
+  <p class="noindent">Three implications seem transferable beyond this project. First, provenance is cheaper to build into ingestion than to reconstruct later: a source column and a raw-event journal cost little, whereas retrofitting them onto mixed historical data is usually impossible. Second, an uncalibrated score should carry a null field rather than a plausible number, because interfaces are read by people who did not read the release notes; removing a misleading field is a feature, not a regression. Third, a detector that reports disagreement honestly is more useful to a small team than one that reports a single accuracy figure, because the first invites review and the second invites false confidence.</p>
+
+  <p>A fourth, more practical implication concerns scope. The parts that made the system usable in a demonstration were not the model: they were the validation messages, the source badges, the incident log and the outbox. A student project that implements only the detector tends to produce a number nobody can act on, and the marginal engineering effort to add the surrounding loop is modest compared with the modelling work.</p>
+
+  <h2>IX. Conclusion and Future Work</h2>
+  <p class="noindent">SkyGuard AI shows that a small, dependency-free detector can sit inside an operational loop that keeps provenance, evidence and human judgement in the same frame. Robust median/MAD deviations and a seeded Isolation Forest give a reproducible score; spatial agreement turns it into a network-level statement; validated, source-tagged ingestion keeps the statement interpretable; and an incident object with recorded evidence gives an operator something to act on. On unlabelled historical data the system flags between roughly a quarter and a half of readings depending on station and season — a rate that motivates calibration rather than confidence. The matched-threshold comparison reinforces the point: two methods can flag the same total number of observations while agreeing on barely a seventh of them.</p>
+
+  <p>Future work follows from the limitations. The first priority is a labelled evaluation with verified fault intervals, station and sensor identity and predefined holdouts; the second is time-aware baselining, since the hour-of-day concentration in Section VII-C suggests that pooled hours inflate the flag rate; the third is per-station calibration with versioned, reversible thresholds and a record of why each change was made. Field validation over a real gateway with a trusted certificate, protected keys and a provisioning process remains outstanding. Only after those steps would we revisit model promotion, and then in shadow mode with a rollback plan before any operational switch.</p>
+
+  <h2>Acknowledgment</h2>
+  <!-- EDIT: 6) replace with your project guide, department and any funding or support -->
+  <p class="noindent">The authors thank [Project Guide Name] for supervision, and the Department of Computer Science and Engineering at [Institution Name] for laboratory and infrastructure support. The NOAA Global Historical Climatology Network hourly dataset and the Open-Meteo API were used under their respective terms.</p>
+
+  <h2>References</h2>
+  <div class="refs">
+    <p>[1] World Meteorological Organization, <i>Guide to Instruments and Methods of Observation</i>, WMO-No. 8, 2021 ed. Geneva, Switzerland: WMO, 2021.</p>
+    <p>[2] India Meteorological Department, “Automatic weather stations and observatories,” Ministry of Earth Sciences, 2026. [Online]. Available: https://mausam.imd.gov.in/</p>
+    <p>[3] NOAA National Centers for Environmental Information, “Global Historical Climatology Network hourly (GHCNh), version 1,” 2024. [Online]. Available: https://www.ncei.noaa.gov/products/global-historical-climatology-network-hourly</p>
+    <p>[4] I. Durre, M. J. Menne, B. E. Gleason, T. G. Houston, and R. S. Vose, “Comprehensive automated quality assurance of daily surface observations,” <i>J. Appl. Meteor. Climatol.</i>, vol. 49, no. 8, pp. 1615–1633, Aug. 2010.</p>
+    <p>[5] V. Chandola, A. Banerjee, and V. Kumar, “Anomaly detection: A survey,” <i>ACM Computing Surveys</i>, vol. 41, no. 3, pp. 1–58, Jul. 2009.</p>
+    <p>[6] D. M. Hawkins, <i>Identification of Outliers</i>. London, U.K.: Chapman and Hall, 1980.</p>
+    <p>[7] M. M. Breunig, H.-P. Kriegel, R. T. Ng, and J. Sander, “LOF: Identifying density-based local outliers,” in <i>Proc. ACM SIGMOD Int. Conf. Management of Data</i>, Dallas, TX, USA, 2000, pp. 93–104.</p>
+    <p>[8] F. T. Liu, K. M. Ting, and Z.-H. Zhou, “Isolation forest,” in <i>Proc. IEEE Int. Conf. Data Mining (ICDM)</i>, Pisa, Italy, 2008, pp. 413–422.</p>
+    <p>[9] P. J. Rousseeuw and C. Croux, “Alternatives to the median absolute deviation,” <i>J. Amer. Statist. Assoc.</i>, vol. 88, no. 424, pp. 1273–1283, Dec. 1993.</p>
+    <p>[10] S. Hochreiter and J. Schmidhuber, “Long short-term memory,” <i>Neural Computation</i>, vol. 9, no. 8, pp. 1735–1780, Nov. 1997.</p>
+    <p>[11] G. E. Hinton and R. R. Salakhutdinov, “Reducing the dimensionality of data with neural networks,” <i>Science</i>, vol. 313, no. 5786, pp. 504–507, Jul. 2006.</p>
+    <p>[12] J. Gama, I. Žliobaitė, A. Bifet, M. Pechenizkiy, and A. Bouchachia, “A survey on concept drift adaptation,” <i>ACM Computing Surveys</i>, vol. 46, no. 4, pp. 1–37, Apr. 2014.</p>
+    <p>[13] R. T. Fielding, “Architectural styles and the design of network-based software architectures,” Ph.D. dissertation, Univ. California, Irvine, CA, USA, 2000.</p>
+    <p>[14] OWASP Foundation, “OWASP application security verification standard 4.0.3,” 2021. [Online]. Available: https://owasp.org/www-project-application-security-verification-standard/</p>
+    <p>[15] D. Sculley <i>et al.</i>, “Hidden technical debt in machine learning systems,” in <i>Proc. Adv. Neural Inf. Process. Syst. (NeurIPS)</i>, Montreal, QC, Canada, 2015, pp. 2503–2511.</p>
+    <p>[16] P. Zippenfenig, “Open-Meteo.com weather API,” Zenodo, 2023, doi: 10.5281/zenodo.7970649.</p>
+    <p>[17] NIST/SEMATECH, “Measurement process drift,” in <i>e-Handbook of Statistical Methods</i>, Gaithersburg, MD, USA: NIST, 2012.</p>
+    <p>[18] E. Rescorla, “The Transport Layer Security (TLS) protocol version 1.3,” RFC 8446, IETF, Aug. 2018.</p>
+  </div>
+
+  <h2>Appendix A: Reproduction</h2>
+  <p class="noindent">The saved reports in this paper were produced by scripts that refuse to overwrite an existing output file, run against an isolated temporary backend, and never contact the demonstration database or an SMTP server. The commands below reproduce the verification and the detector evaluation from the project root; a new output path is required for each report.</p>
+  <pre class="code">npm test                    # unit + integration
+npm run check               # TypeScript, no emit
+npm run build               # Vite + esbuild bundle
+
+node scripts/evaluate-detector.mjs \
+  data/noaa/chennai-ghcnh-january-2024.csv \
+  reports/new-eval.json
+
+node scripts/multistation-perturbations.mjs \
+  reports/calibrated-multistation-comparison.json \
+  reports/new-perturbations.json \
+  data/noaa/ghcnh-INI0000VOMM-2024-07.csv \
+  data/noaa/ghcnh-AEI0000OMDB-2024-07.csv \
+  data/noaa/ghcnh-SNI0000WSSS-2024-07.csv
+
+npx tsx scripts/evaluate-drift-review.ts \
+  reports/new-drift.json data/noaa/*.csv</pre>
+  <p class="srccap">Evaluation is offline by construction; synthetic cases run in memory and are never stored.</p>
+
+  <h2>Appendix B: Station Submission</h2>
+  <p class="noindent">A device submits a batch of one to one hundred readings to the gateway route, each object at most 16 KiB. Every reading must match the station bound to the credential, and <span class="math">pressure_type</span> must be <span class="math">station</span> so that sea-level pressure cannot be submitted as station pressure. The response returns aggregate inserted, duplicate and invalid counts plus per-row issues, so a <span class="math">200</span> response may still contain rejected rows.</p>
+  <pre class="code">POST /api/device/observations
+Authorization: Bearer sgd_&lt;credential&gt;
+Content-Type: application/json
+
+{ "observations": [ {
+    "station_id": "EXAMPLE-001",
+    "station_name": "Example station",
+    "timestamp": "2024-01-01T00:00:00Z",
+    "latitude": 13.0, "longitude": 80.18,
+    "temperature": 25.2, "humidity": 70,
+    "pressure": 1008.4, "pressure_type": "station"
+} ] }</pre>
+
+</div>
+</body>
+</html>

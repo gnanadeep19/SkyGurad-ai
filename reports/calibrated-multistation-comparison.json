@@ -1,0 +1,1314 @@
+{
+  "evaluated_at": "2026-11-13T05:16:19.489Z",
+  "calibration": {
+    "dataset": "chennai-ghcnh-january-2024.csv",
+    "sha256": "b06f4e60da9e9f5a4e11360eafb86d14e678e828b6c581671935472e5905204f",
+    "current_thresholds": {
+      "warning_score": 0.32,
+      "critical_score": 0.62,
+      "regional_fraction": 0.5
+    },
+    "threshold_selection": {
+      "threshold": 1.9879727647731142,
+      "flagged": 64,
+      "target_flagged": 64,
+      "scored": 192
+    },
+    "comparison": {
+      "total_observations": 248,
+      "candidate_eligible": 192,
+      "matched_observations": 192,
+      "current_flagged": 64,
+      "candidate_flagged": 64,
+      "both_flagged": 26,
+      "current_only": 38,
+      "candidate_only": 38,
+      "neither_flagged": 90,
+      "current_flag_fraction": 0.3333,
+      "candidate_flag_fraction": 0.3333,
+      "utc_hour_breakdown": [
+        {
+          "hour_utc": 0,
+          "matched": 24,
+          "current_flagged": 2,
+          "candidate_flagged": 8,
+          "current_flag_fraction": 0.0833,
+          "candidate_flag_fraction": 0.3333
+        },
+        {
+          "hour_utc": 3,
+          "matched": 24,
+          "current_flagged": 7,
+          "candidate_flagged": 12,
+          "current_flag_fraction": 0.2917,
+          "candidate_flag_fraction": 0.5
+        },
+        {
+          "hour_utc": 6,
+          "matched": 24,
+          "current_flagged": 22,
+          "candidate_flagged": 3,
+          "current_flag_fraction": 0.9167,
+          "candidate_flag_fraction": 0.125
+        },
+        {
+          "hour_utc": 9,
+          "matched": 24,
+          "current_flagged": 20,
+          "candidate_flagged": 10,
+          "current_flag_fraction": 0.8333,
+          "candidate_flag_fraction": 0.4167
+        },
+        {
+          "hour_utc": 12,
+          "matched": 24,
+          "current_flagged": 6,
+          "candidate_flagged": 4,
+          "current_flag_fraction": 0.25,
+          "candidate_flag_fraction": 0.1667
+        },
+        {
+          "hour_utc": 15,
+          "matched": 24,
+          "current_flagged": 7,
+          "candidate_flagged": 8,
+          "current_flag_fraction": 0.2917,
+          "candidate_flag_fraction": 0.3333
+        },
+        {
+          "hour_utc": 18,
+          "matched": 24,
+          "current_flagged": 0,
+          "candidate_flagged": 10,
+          "current_flag_fraction": 0,
+          "candidate_flag_fraction": 0.4167
+        },
+        {
+          "hour_utc": 21,
+          "matched": 24,
+          "current_flagged": 0,
+          "candidate_flagged": 9,
+          "current_flag_fraction": 0,
+          "candidate_flag_fraction": 0.375
+        }
+      ]
+    }
+  },
+  "tests": [
+    {
+      "dataset": "chennai-ghcnh-2024-02.csv",
+      "sha256": "cc35b0c5dcb9e171f839e13aa7c3ac621d7653cfa24dc6fd43f2eac8c9f76209",
+      "period": {
+        "start": "2024-02-01T00:00:00.000Z",
+        "end": "2024-02-29T21:00:00.000Z"
+      },
+      "comparison": {
+        "total_observations": 230,
+        "candidate_eligible": 174,
+        "matched_observations": 174,
+        "current_flagged": 56,
+        "candidate_flagged": 48,
+        "both_flagged": 26,
+        "current_only": 30,
+        "candidate_only": 22,
+        "neither_flagged": 96,
+        "current_flag_fraction": 0.3218,
+        "candidate_flag_fraction": 0.2759,
+        "utc_hour_breakdown": [
+          {
+            "hour_utc": 0,
+            "matched": 22,
+            "current_flagged": 2,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.0909,
+            "candidate_flag_fraction": 0.2727
+          },
+          {
+            "hour_utc": 3,
+            "matched": 21,
+            "current_flagged": 2,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.0952,
+            "candidate_flag_fraction": 0.4286
+          },
+          {
+            "hour_utc": 6,
+            "matched": 22,
+            "current_flagged": 15,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0.6818,
+            "candidate_flag_fraction": 0.1818
+          },
+          {
+            "hour_utc": 9,
+            "matched": 22,
+            "current_flagged": 18,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.8182,
+            "candidate_flag_fraction": 0.4091
+          },
+          {
+            "hour_utc": 12,
+            "matched": 22,
+            "current_flagged": 10,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.4545,
+            "candidate_flag_fraction": 0.2727
+          },
+          {
+            "hour_utc": 15,
+            "matched": 21,
+            "current_flagged": 4,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.1905,
+            "candidate_flag_fraction": 0.2381
+          },
+          {
+            "hour_utc": 18,
+            "matched": 22,
+            "current_flagged": 1,
+            "candidate_flagged": 2,
+            "current_flag_fraction": 0.0455,
+            "candidate_flag_fraction": 0.0909
+          },
+          {
+            "hour_utc": 21,
+            "matched": 22,
+            "current_flagged": 4,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.1818,
+            "candidate_flag_fraction": 0.3182
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "ghcnh-INI0000VOMM-2024-07.csv",
+      "sha256": "87456577c09d2f750a4e3d851225bf0efa11c8ec790e4e53f16bcaac7621f8d7",
+      "period": {
+        "start": "2024-07-01T00:00:00.000Z",
+        "end": "2024-07-31T18:00:00.000Z"
+      },
+      "comparison": {
+        "total_observations": 238,
+        "candidate_eligible": 182,
+        "matched_observations": 182,
+        "current_flagged": 54,
+        "candidate_flagged": 62,
+        "both_flagged": 17,
+        "current_only": 37,
+        "candidate_only": 45,
+        "neither_flagged": 83,
+        "current_flag_fraction": 0.2967,
+        "candidate_flag_fraction": 0.3407,
+        "utc_hour_breakdown": [
+          {
+            "hour_utc": 0,
+            "matched": 22,
+            "current_flagged": 1,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.0455,
+            "candidate_flag_fraction": 0.4545
+          },
+          {
+            "hour_utc": 3,
+            "matched": 22,
+            "current_flagged": 4,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0.1818,
+            "candidate_flag_fraction": 0.1818
+          },
+          {
+            "hour_utc": 6,
+            "matched": 23,
+            "current_flagged": 8,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.3478,
+            "candidate_flag_fraction": 0.4348
+          },
+          {
+            "hour_utc": 9,
+            "matched": 24,
+            "current_flagged": 17,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.7083,
+            "candidate_flag_fraction": 0.375
+          },
+          {
+            "hour_utc": 12,
+            "matched": 24,
+            "current_flagged": 14,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.5833,
+            "candidate_flag_fraction": 0.2917
+          },
+          {
+            "hour_utc": 15,
+            "matched": 22,
+            "current_flagged": 6,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.2727,
+            "candidate_flag_fraction": 0.3182
+          },
+          {
+            "hour_utc": 18,
+            "matched": 23,
+            "current_flagged": 1,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.0435,
+            "candidate_flag_fraction": 0.3913
+          },
+          {
+            "hour_utc": 21,
+            "matched": 22,
+            "current_flagged": 3,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.1364,
+            "candidate_flag_fraction": 0.2727
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "ghcnh-SNI0000WSSS-2024-01.csv",
+      "sha256": "bf7ba6ffb10aa2cc306ad2492585dc3502ccdfeae417c71a5455b6c864feb1a3",
+      "period": {
+        "start": "2024-01-01T00:00:00.000Z",
+        "end": "2024-01-31T23:00:00.000Z"
+      },
+      "comparison": {
+        "total_observations": 744,
+        "candidate_eligible": 576,
+        "matched_observations": 576,
+        "current_flagged": 183,
+        "candidate_flagged": 160,
+        "both_flagged": 54,
+        "current_only": 129,
+        "candidate_only": 106,
+        "neither_flagged": 287,
+        "current_flag_fraction": 0.3177,
+        "candidate_flag_fraction": 0.2778,
+        "utc_hour_breakdown": [
+          {
+            "hour_utc": 0,
+            "matched": 24,
+            "current_flagged": 1,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.0417,
+            "candidate_flag_fraction": 0.2083
+          },
+          {
+            "hour_utc": 1,
+            "matched": 24,
+            "current_flagged": 8,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.3333,
+            "candidate_flag_fraction": 0.375
+          },
+          {
+            "hour_utc": 2,
+            "matched": 24,
+            "current_flagged": 10,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.4167,
+            "candidate_flag_fraction": 0.25
+          },
+          {
+            "hour_utc": 3,
+            "matched": 24,
+            "current_flagged": 16,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.6667,
+            "candidate_flag_fraction": 0.4167
+          },
+          {
+            "hour_utc": 4,
+            "matched": 24,
+            "current_flagged": 12,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.5,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 5,
+            "matched": 24,
+            "current_flagged": 17,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.7083,
+            "candidate_flag_fraction": 0.2083
+          },
+          {
+            "hour_utc": 6,
+            "matched": 24,
+            "current_flagged": 21,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.875,
+            "candidate_flag_fraction": 0.2083
+          },
+          {
+            "hour_utc": 7,
+            "matched": 24,
+            "current_flagged": 21,
+            "candidate_flagged": 2,
+            "current_flag_fraction": 0.875,
+            "candidate_flag_fraction": 0.0833
+          },
+          {
+            "hour_utc": 8,
+            "matched": 24,
+            "current_flagged": 20,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.8333,
+            "candidate_flag_fraction": 0.2917
+          },
+          {
+            "hour_utc": 9,
+            "matched": 24,
+            "current_flagged": 19,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.7917,
+            "candidate_flag_fraction": 0.2083
+          },
+          {
+            "hour_utc": 10,
+            "matched": 24,
+            "current_flagged": 14,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0.5833,
+            "candidate_flag_fraction": 0.1667
+          },
+          {
+            "hour_utc": 11,
+            "matched": 24,
+            "current_flagged": 8,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.3333,
+            "candidate_flag_fraction": 0.25
+          },
+          {
+            "hour_utc": 12,
+            "matched": 24,
+            "current_flagged": 1,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.0417,
+            "candidate_flag_fraction": 0.2917
+          },
+          {
+            "hour_utc": 13,
+            "matched": 24,
+            "current_flagged": 2,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.0833,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 14,
+            "matched": 24,
+            "current_flagged": 3,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.125,
+            "candidate_flag_fraction": 0.25
+          },
+          {
+            "hour_utc": 15,
+            "matched": 24,
+            "current_flagged": 2,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.0833,
+            "candidate_flag_fraction": 0.25
+          },
+          {
+            "hour_utc": 16,
+            "matched": 24,
+            "current_flagged": 2,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.0833,
+            "candidate_flag_fraction": 0.2917
+          },
+          {
+            "hour_utc": 17,
+            "matched": 24,
+            "current_flagged": 0,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0,
+            "candidate_flag_fraction": 0.25
+          },
+          {
+            "hour_utc": 18,
+            "matched": 24,
+            "current_flagged": 2,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.0833,
+            "candidate_flag_fraction": 0.375
+          },
+          {
+            "hour_utc": 19,
+            "matched": 24,
+            "current_flagged": 1,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.0417,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 20,
+            "matched": 24,
+            "current_flagged": 0,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0,
+            "candidate_flag_fraction": 0.2917
+          },
+          {
+            "hour_utc": 21,
+            "matched": 24,
+            "current_flagged": 1,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.0417,
+            "candidate_flag_fraction": 0.2917
+          },
+          {
+            "hour_utc": 22,
+            "matched": 24,
+            "current_flagged": 1,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.0417,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 23,
+            "matched": 24,
+            "current_flagged": 1,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.0417,
+            "candidate_flag_fraction": 0.375
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "ghcnh-SNI0000WSSS-2024-07.csv",
+      "sha256": "3e4d3346b6a5bc4617e51a2e74092eecb87e41bbb7f2fac38a3fb56c09c44881",
+      "period": {
+        "start": "2024-07-01T00:00:00.000Z",
+        "end": "2024-07-31T23:00:00.000Z"
+      },
+      "comparison": {
+        "total_observations": 731,
+        "candidate_eligible": 563,
+        "matched_observations": 563,
+        "current_flagged": 167,
+        "candidate_flagged": 118,
+        "both_flagged": 73,
+        "current_only": 94,
+        "candidate_only": 45,
+        "neither_flagged": 351,
+        "current_flag_fraction": 0.2966,
+        "candidate_flag_fraction": 0.2096,
+        "utc_hour_breakdown": [
+          {
+            "hour_utc": 0,
+            "matched": 24,
+            "current_flagged": 3,
+            "candidate_flagged": 1,
+            "current_flag_fraction": 0.125,
+            "candidate_flag_fraction": 0.0417
+          },
+          {
+            "hour_utc": 1,
+            "matched": 24,
+            "current_flagged": 6,
+            "candidate_flagged": 2,
+            "current_flag_fraction": 0.25,
+            "candidate_flag_fraction": 0.0833
+          },
+          {
+            "hour_utc": 2,
+            "matched": 23,
+            "current_flagged": 7,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.3043,
+            "candidate_flag_fraction": 0.2609
+          },
+          {
+            "hour_utc": 3,
+            "matched": 23,
+            "current_flagged": 7,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0.3043,
+            "candidate_flag_fraction": 0.1739
+          },
+          {
+            "hour_utc": 4,
+            "matched": 23,
+            "current_flagged": 11,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0.4783,
+            "candidate_flag_fraction": 0.1739
+          },
+          {
+            "hour_utc": 5,
+            "matched": 24,
+            "current_flagged": 16,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.6667,
+            "candidate_flag_fraction": 0.2917
+          },
+          {
+            "hour_utc": 6,
+            "matched": 24,
+            "current_flagged": 18,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0.75,
+            "candidate_flag_fraction": 0.1667
+          },
+          {
+            "hour_utc": 7,
+            "matched": 24,
+            "current_flagged": 19,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.7917,
+            "candidate_flag_fraction": 0.2083
+          },
+          {
+            "hour_utc": 8,
+            "matched": 24,
+            "current_flagged": 16,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.6667,
+            "candidate_flag_fraction": 0.25
+          },
+          {
+            "hour_utc": 9,
+            "matched": 24,
+            "current_flagged": 13,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.5417,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 10,
+            "matched": 24,
+            "current_flagged": 12,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.5,
+            "candidate_flag_fraction": 0.2917
+          },
+          {
+            "hour_utc": 11,
+            "matched": 24,
+            "current_flagged": 5,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.2083,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 12,
+            "matched": 24,
+            "current_flagged": 3,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.125,
+            "candidate_flag_fraction": 0.2083
+          },
+          {
+            "hour_utc": 13,
+            "matched": 24,
+            "current_flagged": 3,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0.125,
+            "candidate_flag_fraction": 0.1667
+          },
+          {
+            "hour_utc": 14,
+            "matched": 24,
+            "current_flagged": 3,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0.125,
+            "candidate_flag_fraction": 0.1667
+          },
+          {
+            "hour_utc": 15,
+            "matched": 24,
+            "current_flagged": 3,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0.125,
+            "candidate_flag_fraction": 0.1667
+          },
+          {
+            "hour_utc": 16,
+            "matched": 24,
+            "current_flagged": 2,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.0833,
+            "candidate_flag_fraction": 0.2083
+          },
+          {
+            "hour_utc": 17,
+            "matched": 24,
+            "current_flagged": 2,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.0833,
+            "candidate_flag_fraction": 0.2083
+          },
+          {
+            "hour_utc": 18,
+            "matched": 24,
+            "current_flagged": 2,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.0833,
+            "candidate_flag_fraction": 0.25
+          },
+          {
+            "hour_utc": 19,
+            "matched": 22,
+            "current_flagged": 3,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.1364,
+            "candidate_flag_fraction": 0.3182
+          },
+          {
+            "hour_utc": 20,
+            "matched": 23,
+            "current_flagged": 5,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.2174,
+            "candidate_flag_fraction": 0.2174
+          },
+          {
+            "hour_utc": 21,
+            "matched": 22,
+            "current_flagged": 2,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.0909,
+            "candidate_flag_fraction": 0.2727
+          },
+          {
+            "hour_utc": 22,
+            "matched": 22,
+            "current_flagged": 5,
+            "candidate_flagged": 2,
+            "current_flag_fraction": 0.2273,
+            "candidate_flag_fraction": 0.0909
+          },
+          {
+            "hour_utc": 23,
+            "matched": 21,
+            "current_flagged": 1,
+            "candidate_flagged": 3,
+            "current_flag_fraction": 0.0476,
+            "candidate_flag_fraction": 0.1429
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "ghcnh-AEI0000OMDB-2024-01.csv",
+      "sha256": "cfcba638ea6c7b711fa76cf14baa4b84e8d15b7eebcf34c7f083e1f4fac8518b",
+      "period": {
+        "start": "2024-01-01T00:00:00.000Z",
+        "end": "2024-01-31T21:00:00.000Z"
+      },
+      "comparison": {
+        "total_observations": 248,
+        "candidate_eligible": 192,
+        "matched_observations": 192,
+        "current_flagged": 67,
+        "candidate_flagged": 81,
+        "both_flagged": 45,
+        "current_only": 22,
+        "candidate_only": 36,
+        "neither_flagged": 89,
+        "current_flag_fraction": 0.349,
+        "candidate_flag_fraction": 0.4219,
+        "utc_hour_breakdown": [
+          {
+            "hour_utc": 0,
+            "matched": 24,
+            "current_flagged": 7,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.2917,
+            "candidate_flag_fraction": 0.4167
+          },
+          {
+            "hour_utc": 3,
+            "matched": 24,
+            "current_flagged": 9,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.375,
+            "candidate_flag_fraction": 0.375
+          },
+          {
+            "hour_utc": 6,
+            "matched": 24,
+            "current_flagged": 12,
+            "candidate_flagged": 12,
+            "current_flag_fraction": 0.5,
+            "candidate_flag_fraction": 0.5
+          },
+          {
+            "hour_utc": 9,
+            "matched": 24,
+            "current_flagged": 16,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.6667,
+            "candidate_flag_fraction": 0.4167
+          },
+          {
+            "hour_utc": 12,
+            "matched": 24,
+            "current_flagged": 11,
+            "candidate_flagged": 11,
+            "current_flag_fraction": 0.4583,
+            "candidate_flag_fraction": 0.4583
+          },
+          {
+            "hour_utc": 15,
+            "matched": 24,
+            "current_flagged": 6,
+            "candidate_flagged": 11,
+            "current_flag_fraction": 0.25,
+            "candidate_flag_fraction": 0.4583
+          },
+          {
+            "hour_utc": 18,
+            "matched": 24,
+            "current_flagged": 2,
+            "candidate_flagged": 11,
+            "current_flag_fraction": 0.0833,
+            "candidate_flag_fraction": 0.4583
+          },
+          {
+            "hour_utc": 21,
+            "matched": 24,
+            "current_flagged": 4,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.1667,
+            "candidate_flag_fraction": 0.2917
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "ghcnh-AEI0000OMDB-2024-07.csv",
+      "sha256": "355f58f541bde0ad7994e79df6f1a7498ad0dc2980bf01c7c3fc0e8cff72b0e6",
+      "period": {
+        "start": "2024-07-01T00:00:00.000Z",
+        "end": "2024-07-31T18:00:00.000Z"
+      },
+      "comparison": {
+        "total_observations": 237,
+        "candidate_eligible": 181,
+        "matched_observations": 181,
+        "current_flagged": 49,
+        "candidate_flagged": 74,
+        "both_flagged": 33,
+        "current_only": 16,
+        "candidate_only": 41,
+        "neither_flagged": 91,
+        "current_flag_fraction": 0.2707,
+        "candidate_flag_fraction": 0.4088,
+        "utc_hour_breakdown": [
+          {
+            "hour_utc": 0,
+            "matched": 23,
+            "current_flagged": 3,
+            "candidate_flagged": 13,
+            "current_flag_fraction": 0.1304,
+            "candidate_flag_fraction": 0.5652
+          },
+          {
+            "hour_utc": 3,
+            "matched": 23,
+            "current_flagged": 4,
+            "candidate_flagged": 11,
+            "current_flag_fraction": 0.1739,
+            "candidate_flag_fraction": 0.4783
+          },
+          {
+            "hour_utc": 6,
+            "matched": 21,
+            "current_flagged": 5,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.2381,
+            "candidate_flag_fraction": 0.2857
+          },
+          {
+            "hour_utc": 9,
+            "matched": 23,
+            "current_flagged": 10,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.4348,
+            "candidate_flag_fraction": 0.4348
+          },
+          {
+            "hour_utc": 12,
+            "matched": 24,
+            "current_flagged": 12,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.5,
+            "candidate_flag_fraction": 0.375
+          },
+          {
+            "hour_utc": 15,
+            "matched": 22,
+            "current_flagged": 6,
+            "candidate_flagged": 12,
+            "current_flag_fraction": 0.2727,
+            "candidate_flag_fraction": 0.5455
+          },
+          {
+            "hour_utc": 18,
+            "matched": 23,
+            "current_flagged": 6,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.2609,
+            "candidate_flag_fraction": 0.3478
+          },
+          {
+            "hour_utc": 21,
+            "matched": 22,
+            "current_flagged": 3,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.1364,
+            "candidate_flag_fraction": 0.2273
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "ghcnh-UKI0000EGLL-2024-01.csv",
+      "sha256": "1aa98dd342a9fdb429987e15ebe3c796d13747c7d5aebbff9c31a579c1c18479",
+      "period": {
+        "start": "2024-01-01T00:00:00.000Z",
+        "end": "2024-01-31T23:00:00.000Z"
+      },
+      "comparison": {
+        "total_observations": 741,
+        "candidate_eligible": 573,
+        "matched_observations": 573,
+        "current_flagged": 311,
+        "candidate_flagged": 192,
+        "both_flagged": 116,
+        "current_only": 195,
+        "candidate_only": 76,
+        "neither_flagged": 186,
+        "current_flag_fraction": 0.5428,
+        "candidate_flag_fraction": 0.3351,
+        "utc_hour_breakdown": [
+          {
+            "hour_utc": 0,
+            "matched": 24,
+            "current_flagged": 12,
+            "candidate_flagged": 11,
+            "current_flag_fraction": 0.5,
+            "candidate_flag_fraction": 0.4583
+          },
+          {
+            "hour_utc": 1,
+            "matched": 24,
+            "current_flagged": 14,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.5833,
+            "candidate_flag_fraction": 0.375
+          },
+          {
+            "hour_utc": 2,
+            "matched": 24,
+            "current_flagged": 14,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.5833,
+            "candidate_flag_fraction": 0.4167
+          },
+          {
+            "hour_utc": 3,
+            "matched": 24,
+            "current_flagged": 12,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.5,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 4,
+            "matched": 24,
+            "current_flagged": 14,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.5833,
+            "candidate_flag_fraction": 0.25
+          },
+          {
+            "hour_utc": 5,
+            "matched": 24,
+            "current_flagged": 15,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.625,
+            "candidate_flag_fraction": 0.25
+          },
+          {
+            "hour_utc": 6,
+            "matched": 24,
+            "current_flagged": 16,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.6667,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 7,
+            "matched": 24,
+            "current_flagged": 16,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.6667,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 8,
+            "matched": 24,
+            "current_flagged": 14,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.5833,
+            "candidate_flag_fraction": 0.375
+          },
+          {
+            "hour_utc": 9,
+            "matched": 23,
+            "current_flagged": 14,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.6087,
+            "candidate_flag_fraction": 0.3478
+          },
+          {
+            "hour_utc": 10,
+            "matched": 24,
+            "current_flagged": 14,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.5833,
+            "candidate_flag_fraction": 0.375
+          },
+          {
+            "hour_utc": 11,
+            "matched": 23,
+            "current_flagged": 12,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.5217,
+            "candidate_flag_fraction": 0.3043
+          },
+          {
+            "hour_utc": 12,
+            "matched": 24,
+            "current_flagged": 16,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.6667,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 13,
+            "matched": 23,
+            "current_flagged": 15,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.6522,
+            "candidate_flag_fraction": 0.4348
+          },
+          {
+            "hour_utc": 14,
+            "matched": 24,
+            "current_flagged": 13,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.5417,
+            "candidate_flag_fraction": 0.4167
+          },
+          {
+            "hour_utc": 15,
+            "matched": 24,
+            "current_flagged": 12,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.5,
+            "candidate_flag_fraction": 0.375
+          },
+          {
+            "hour_utc": 16,
+            "matched": 24,
+            "current_flagged": 12,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.5,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 17,
+            "matched": 24,
+            "current_flagged": 11,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.4583,
+            "candidate_flag_fraction": 0.2917
+          },
+          {
+            "hour_utc": 18,
+            "matched": 24,
+            "current_flagged": 10,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.4167,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 19,
+            "matched": 24,
+            "current_flagged": 11,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.4583,
+            "candidate_flag_fraction": 0.2083
+          },
+          {
+            "hour_utc": 20,
+            "matched": 24,
+            "current_flagged": 11,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.4583,
+            "candidate_flag_fraction": 0.2917
+          },
+          {
+            "hour_utc": 21,
+            "matched": 24,
+            "current_flagged": 12,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.5,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 22,
+            "matched": 24,
+            "current_flagged": 11,
+            "candidate_flagged": 5,
+            "current_flag_fraction": 0.4583,
+            "candidate_flag_fraction": 0.2083
+          },
+          {
+            "hour_utc": 23,
+            "matched": 24,
+            "current_flagged": 10,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.4167,
+            "candidate_flag_fraction": 0.3333
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "ghcnh-UKI0000EGLL-2024-07.csv",
+      "sha256": "e8055a41328661b905b172aa33c6adaf52c0cad2b526623720e335ea020119e3",
+      "period": {
+        "start": "2024-07-01T00:00:00.000Z",
+        "end": "2024-07-31T23:00:00.000Z"
+      },
+      "comparison": {
+        "total_observations": 693,
+        "candidate_eligible": 525,
+        "matched_observations": 525,
+        "current_flagged": 236,
+        "candidate_flagged": 209,
+        "both_flagged": 108,
+        "current_only": 128,
+        "candidate_only": 101,
+        "neither_flagged": 188,
+        "current_flag_fraction": 0.4495,
+        "candidate_flag_fraction": 0.3981,
+        "utc_hour_breakdown": [
+          {
+            "hour_utc": 0,
+            "matched": 22,
+            "current_flagged": 4,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.1818,
+            "candidate_flag_fraction": 0.4545
+          },
+          {
+            "hour_utc": 1,
+            "matched": 23,
+            "current_flagged": 7,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.3043,
+            "candidate_flag_fraction": 0.3478
+          },
+          {
+            "hour_utc": 2,
+            "matched": 23,
+            "current_flagged": 4,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.1739,
+            "candidate_flag_fraction": 0.4348
+          },
+          {
+            "hour_utc": 3,
+            "matched": 22,
+            "current_flagged": 9,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.4091,
+            "candidate_flag_fraction": 0.4545
+          },
+          {
+            "hour_utc": 4,
+            "matched": 24,
+            "current_flagged": 12,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.5,
+            "candidate_flag_fraction": 0.4167
+          },
+          {
+            "hour_utc": 5,
+            "matched": 23,
+            "current_flagged": 8,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.3478,
+            "candidate_flag_fraction": 0.4348
+          },
+          {
+            "hour_utc": 6,
+            "matched": 23,
+            "current_flagged": 8,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.3478,
+            "candidate_flag_fraction": 0.3913
+          },
+          {
+            "hour_utc": 7,
+            "matched": 24,
+            "current_flagged": 9,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.375,
+            "candidate_flag_fraction": 0.4167
+          },
+          {
+            "hour_utc": 8,
+            "matched": 22,
+            "current_flagged": 6,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.2727,
+            "candidate_flag_fraction": 0.3636
+          },
+          {
+            "hour_utc": 9,
+            "matched": 21,
+            "current_flagged": 8,
+            "candidate_flagged": 11,
+            "current_flag_fraction": 0.381,
+            "candidate_flag_fraction": 0.5238
+          },
+          {
+            "hour_utc": 10,
+            "matched": 20,
+            "current_flagged": 12,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.6,
+            "candidate_flag_fraction": 0.4
+          },
+          {
+            "hour_utc": 11,
+            "matched": 22,
+            "current_flagged": 13,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.5909,
+            "candidate_flag_fraction": 0.4545
+          },
+          {
+            "hour_utc": 12,
+            "matched": 21,
+            "current_flagged": 12,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.5714,
+            "candidate_flag_fraction": 0.381
+          },
+          {
+            "hour_utc": 13,
+            "matched": 23,
+            "current_flagged": 17,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.7391,
+            "candidate_flag_fraction": 0.3478
+          },
+          {
+            "hour_utc": 14,
+            "matched": 21,
+            "current_flagged": 15,
+            "candidate_flagged": 7,
+            "current_flag_fraction": 0.7143,
+            "candidate_flag_fraction": 0.3333
+          },
+          {
+            "hour_utc": 15,
+            "matched": 22,
+            "current_flagged": 14,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.6364,
+            "candidate_flag_fraction": 0.4545
+          },
+          {
+            "hour_utc": 16,
+            "matched": 20,
+            "current_flagged": 12,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.6,
+            "candidate_flag_fraction": 0.45
+          },
+          {
+            "hour_utc": 17,
+            "matched": 20,
+            "current_flagged": 12,
+            "candidate_flagged": 6,
+            "current_flag_fraction": 0.6,
+            "candidate_flag_fraction": 0.3
+          },
+          {
+            "hour_utc": 18,
+            "matched": 20,
+            "current_flagged": 12,
+            "candidate_flagged": 9,
+            "current_flag_fraction": 0.6,
+            "candidate_flag_fraction": 0.45
+          },
+          {
+            "hour_utc": 19,
+            "matched": 22,
+            "current_flagged": 13,
+            "candidate_flagged": 10,
+            "current_flag_fraction": 0.5909,
+            "candidate_flag_fraction": 0.4545
+          },
+          {
+            "hour_utc": 20,
+            "matched": 23,
+            "current_flagged": 12,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.5217,
+            "candidate_flag_fraction": 0.3478
+          },
+          {
+            "hour_utc": 21,
+            "matched": 21,
+            "current_flagged": 6,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.2857,
+            "candidate_flag_fraction": 0.381
+          },
+          {
+            "hour_utc": 22,
+            "matched": 21,
+            "current_flagged": 4,
+            "candidate_flagged": 8,
+            "current_flag_fraction": 0.1905,
+            "candidate_flag_fraction": 0.381
+          },
+          {
+            "hour_utc": 23,
+            "matched": 22,
+            "current_flagged": 7,
+            "candidate_flagged": 4,
+            "current_flag_fraction": 0.3182,
+            "candidate_flag_fraction": 0.1818
+          }
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "The candidate threshold is fitted once to approximate the current detector's flag count on the January Chennai development sample; held-out periods and stations are not used to choose it.",
+    "Each dataset is replayed independently and only matched scored observations are compared. Both baselines use earlier readings only.",
+    "Matching an overall flag rate on unlabeled observations does not prove equal sensitivity, equal false-positive rates, or fault-detection accuracy.",
+    "Temperature and station pressure are NOAA source 223 quality code 1; humidity is derived (code D), not independently measured, and its quality code is blank.",
+    "The time baseline and calibrated threshold are experimental and do not modify the live detector."
+  ]
+}

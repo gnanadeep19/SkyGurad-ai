@@ -1,0 +1,30 @@
+﻿data/runtime/users.json
+data/runtime/users.json.*.tmp
+data/runtime/device-credentials.json
+data/runtime/device-credentials.json.*.tmp
+node_modules/
+dist/
+data/runtime/observation-events.jsonl
+data/runtime/anomaly-results.jsonl
+data/runtime/audit.jsonl
+data/runtime/detector-settings.json
+data/runtime/detector-settings.*.tmp
+data/runtime/observations.jsonl.*.bak
+data/runtime/stations.json
+data/runtime/alerts.jsonl
+data/runtime/station-incidents.jsonl
+data/runtime/notification-outbox.jsonl
+.env.skyguard.local
+data/postgres-local/
+data/gateway-local/
+data/runtime/*.bak
+data/runtime/observations.jsonl
+# Large NOAA source downloads are retained locally; the prepared sample is shareable.
+data/noaa/*.psv
+data/noaa/ghcnh-station-list.txt
+
+# Runtime state, credentials, generated logs, and backups are never deployment source.
+data/runtime/
+.manus-logs/
+.env*
+!.env.example

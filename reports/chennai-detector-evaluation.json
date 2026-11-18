@@ -1,0 +1,32 @@
+{
+  "dataset": "chennai-ghcnh-january-2024.csv",
+  "sha256": "b06f4e60da9e9f5a4e11360eafb86d14e678e828b6c581671935472e5905204f",
+  "evaluated_at": "2026-11-12T19:31:09.055Z",
+  "rows": 248,
+  "unique_observations": 248,
+  "period": {
+    "start": "2024-01-01T00:00:00.000Z",
+    "end": "2024-01-31T21:00:00.000Z"
+  },
+  "historical_summary": {
+    "scored": 224,
+    "insufficient": 24,
+    "warning": 69,
+    "critical": 0,
+    "baseline_window": 96,
+    "refit_interval": 24,
+    "minimum_history": 24
+  },
+  "thresholds": {
+    "warning_score": 0.32,
+    "critical_score": 0.62,
+    "regional_fraction": 0.5
+  },
+  "flagged_fraction_of_scored": 0.308,
+  "labeled_evaluation": null,
+  "notes": [
+    "Rolling evaluation scores each observation using earlier observations only; it is not an independent deployment validation.",
+    "Flagged observations are not confirmed sensor faults.",
+    "No fault labels were supplied; false-positive rate, precision and recall cannot be determined."
+  ]
+}

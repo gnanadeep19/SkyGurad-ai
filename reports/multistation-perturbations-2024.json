@@ -1,0 +1,1950 @@
+{
+  "evaluated_at": "2026-11-13T06:04:51.499Z",
+  "calibration_dataset": "chennai-ghcnh-january-2024.csv",
+  "calibration_sha256": "b06f4e60da9e9f5a4e11360eafb86d14e678e828b6c581671935472e5905204f",
+  "candidate_threshold": 1.9879727647731142,
+  "current_thresholds": {
+    "warning_score": 0.32,
+    "critical_score": 0.62,
+    "regional_fraction": 0.5
+  },
+  "datasets": [
+    {
+      "dataset": "ghcnh-INI0000VOMM-2024-07.csv",
+      "sha256": "87456577c09d2f750a4e3d851225bf0efa11c8ec790e4e53f16bcaac7621f8d7",
+      "station_id": "INI0000VOMM",
+      "anchors": [
+        "2024-07-15T00:00:00.000Z",
+        "2024-07-16T12:00:00.000Z"
+      ],
+      "cases": [
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "temperature",
+          "delta": 1,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "temperature",
+          "delta": -1,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "humidity",
+          "delta": 5,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "humidity",
+          "delta": -5,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "pressure",
+          "delta": 2,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "pressure",
+          "delta": -2,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "temperature",
+          "delta": 1,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "temperature",
+          "delta": -1,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "humidity",
+          "delta": 5,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "humidity",
+          "delta": -5,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "pressure",
+          "delta": 2,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "pressure",
+          "delta": -2,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "24_hour_ramp",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "temperature",
+          "delta": 2,
+          "steps": [
+            {
+              "hours": 3,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 6,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 9,
+              "original": {
+                "current": true,
+                "candidate": true
+              },
+              "injected": {
+                "current": true,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 12,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 15,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 18,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 21,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 24,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            }
+          ]
+        },
+        {
+          "kind": "24_hour_ramp",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "humidity",
+          "delta": 10,
+          "steps": [
+            {
+              "hours": 3,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 6,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 9,
+              "original": {
+                "current": true,
+                "candidate": true
+              },
+              "injected": {
+                "current": true,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 12,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": true,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 15,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 18,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 21,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 24,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            }
+          ]
+        },
+        {
+          "kind": "24_hour_ramp",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "pressure",
+          "delta": 5,
+          "steps": [
+            {
+              "hours": 3,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 6,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 9,
+              "original": {
+                "current": true,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 12,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 15,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 18,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 21,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 24,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "ghcnh-AEI0000OMDB-2024-07.csv",
+      "sha256": "355f58f541bde0ad7994e79df6f1a7498ad0dc2980bf01c7c3fc0e8cff72b0e6",
+      "station_id": "AEI0000OMDB",
+      "anchors": [
+        "2024-07-15T00:00:00.000Z",
+        "2024-07-16T12:00:00.000Z"
+      ],
+      "cases": [
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "temperature",
+          "delta": 1,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "temperature",
+          "delta": -1,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "humidity",
+          "delta": 5,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "humidity",
+          "delta": -5,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "pressure",
+          "delta": 2,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "pressure",
+          "delta": -2,
+          "original": {
+            "current": false,
+            "candidate": true
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "temperature",
+          "delta": 1,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "temperature",
+          "delta": -1,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "humidity",
+          "delta": 5,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "humidity",
+          "delta": -5,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "pressure",
+          "delta": 2,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "pressure",
+          "delta": -2,
+          "original": {
+            "current": true,
+            "candidate": false
+          },
+          "injected": {
+            "current": true,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "24_hour_ramp",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "temperature",
+          "delta": 2,
+          "steps": [
+            {
+              "hours": 3,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 6,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 9,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 12,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 15,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 18,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 21,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 24,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            }
+          ]
+        },
+        {
+          "kind": "24_hour_ramp",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "humidity",
+          "delta": 10,
+          "steps": [
+            {
+              "hours": 3,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": true,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 6,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 9,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 12,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 15,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 18,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 21,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 24,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": true,
+                "candidate": true
+              }
+            }
+          ]
+        },
+        {
+          "kind": "24_hour_ramp",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "pressure",
+          "delta": 5,
+          "steps": [
+            {
+              "hours": 3,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": true,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 6,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 9,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 12,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 15,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 18,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 21,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 24,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": true,
+                "candidate": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "ghcnh-SNI0000WSSS-2024-07.csv",
+      "sha256": "3e4d3346b6a5bc4617e51a2e74092eecb87e41bbb7f2fac38a3fb56c09c44881",
+      "station_id": "SNI0000WSSS",
+      "anchors": [
+        "2024-07-15T00:00:00.000Z",
+        "2024-07-16T12:00:00.000Z"
+      ],
+      "cases": [
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "temperature",
+          "delta": 1,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "temperature",
+          "delta": -1,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "humidity",
+          "delta": 5,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "humidity",
+          "delta": -5,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "pressure",
+          "delta": 2,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "pressure",
+          "delta": -2,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "temperature",
+          "delta": 1,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "temperature",
+          "delta": -1,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "humidity",
+          "delta": 5,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "humidity",
+          "delta": -5,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "pressure",
+          "delta": 2,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": false
+          }
+        },
+        {
+          "kind": "spike",
+          "timestamp": "2024-07-16T12:00:00.000Z",
+          "field": "pressure",
+          "delta": -2,
+          "original": {
+            "current": false,
+            "candidate": false
+          },
+          "injected": {
+            "current": false,
+            "candidate": true
+          }
+        },
+        {
+          "kind": "24_hour_ramp",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "temperature",
+          "delta": 2,
+          "steps": [
+            {
+              "hours": 1,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 2,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 3,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 4,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 5,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 6,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 7,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 8,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 9,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 10,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 11,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 12,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 13,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 14,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 15,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 16,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 17,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 18,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 19,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 20,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 21,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 22,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 23,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 24,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            }
+          ]
+        },
+        {
+          "kind": "24_hour_ramp",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "humidity",
+          "delta": 10,
+          "steps": [
+            {
+              "hours": 1,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 2,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 3,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 4,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 5,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 6,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 7,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 8,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 9,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 10,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 11,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 12,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 13,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 14,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 15,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 16,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 17,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 18,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 19,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 20,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 21,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 22,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 23,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 24,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            }
+          ]
+        },
+        {
+          "kind": "24_hour_ramp",
+          "timestamp": "2024-07-15T00:00:00.000Z",
+          "field": "pressure",
+          "delta": 5,
+          "steps": [
+            {
+              "hours": 1,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 2,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 3,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 4,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 5,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 6,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 7,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 8,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 9,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 10,
+              "original": {
+                "current": true,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 11,
+              "original": {
+                "current": false,
+                "candidate": true
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 12,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 13,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": false
+              }
+            },
+            {
+              "hours": 14,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 15,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 16,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 17,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 18,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 19,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 20,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 21,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 22,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 23,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": false,
+                "candidate": true
+              }
+            },
+            {
+              "hours": 24,
+              "original": {
+                "current": false,
+                "candidate": false
+              },
+              "injected": {
+                "current": true,
+                "candidate": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Each case replays one separately altered unlabeled dataset in temporary storage; there are no live detector or notification changes.",
+    "The January Chennai calibration is fixed; held-out cases did not select the thresholds.",
+    "A new flag appears on an altered reading that was not flagged at that time in the same method's unmodified control. Counts exclude already-flagged control readings.",
+    "A ramp starts at the first selected time and changes every observation for 24 hours, using its actual elapsed time. Missing endpoint, gaps over three hours and out-of-range perturbations are skipped, not filled.",
+    "Humidity is derived from temperature and dew point. Independent synthetic perturbations may produce physically inconsistent combinations.",
+    "Synthetic anomalies are not verified sensor faults; these counts are not real-world recall or false-positive rates."
+  ]
+}
